@@ -6,7 +6,7 @@ zsh配置 基于ohz精简 启动速度稳定在0.1s内
 
 ```shell
   cd ~/.config
-  git clone https://github.com/yaocccc/zsh
+  git clone https://github.com/millionfor/zsh
   echo 'source ~/.config/zsh/init.zsh' >> ~/.zshrc
 ```
 
