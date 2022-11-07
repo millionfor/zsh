@@ -611,3 +611,361 @@
 : 1667537404:0;cd zsh
 : 1667537408:0;vim README.md
 : 1667537419:0;g acp
+: 1667538050:0;gg
+: 1667538054:0;gg hss
+: 1667538055:0;l
+: 1667538059:0;cd ..
+: 1667538059:0;..
+: 1667538067:0;gg hss
+: 1667538068:0;l
+: 1667538075:0;cd ..
+: 1667538078:0;cd lbxdrugs-hss-webpack-config
+: 1667538080:0;vim package.json
+: 1667538259:0;yarn build
+: 1667538262:0;nrm ls
+: 1667538267:0;nrm use hydee
+: 1667538271:0;yarn publish
+: 1667538287:0;vim package.json
+: 1667538296:0;g st
+: 1667538297:0;g acp
+: 1667538313:0;g pl
+: 1667538318:0;g push
+: 1667538424:0;vim 
+: 1667538428:0;vim
+: 1667538744:0;...
+: 1667538744:0;l
+: 1667538759:0;ll
+: 1667538763:0;cd frontend-lbxdrugs-static
+: 1667538763:0;l
+: 1667538765:0;g pl
+: 1667538770:0;gg .
+: 1667538816:0;g st
+: 1667538844:0;g acp
+: 1667539216:0;ssh huaweicloud
+: 1667539234:0;ssh tencent
+: 1667539547:0;..
+: 1667539549:0;gg
+: 1667539550:0;l
+: 1667539556:0;vim ~/.zshrc
+: 1667539572:0;vim
+: 1667539616:0;source ~/.zshrc
+: 1667539627:0;gz
+: 1667539632:0;aa
+: 1667539634:0;aa .
+: 1667539784:0;vim
+: 1667539915:0;g acp
+: 1667539919:0;g pl
+: 1667539925:0;g push
+: 1667539928:0;vim 
+: 1667540184:0;g acp
+: 1667541045:0;..
+: 1667541080:0;g clone git@10.200.25.127:client/operation.git
+: 1667541084:0;cd operation
+: 1667541085:0;yanr
+: 1667541087:0;g up
+: 1667541092:0;g br -a
+: 1667541101:0;g co feat_mall_v1.0-laobaixing
+: 1667541104:0;vim 
+: 1667541560:0;aa
+: 1667541563:0;l
+: 1667541566:0;aa hss
+: 1667541566:0;l
+: 1667541570:0;cd ..
+: 1667541575:0;..
+: 1667541581:0;cd test
+: 1667541582:0;l
+: 1667541586:0;cd s1
+: 1667541588:0;vim
+: 1667541923:0;node index.js
+: 1667541999:0;aa .
+: 1667542016:0;aa
+: 1667542019:0;cd hydee-perject
+: 1667542019:0;l
+: 1667542022:0;cd frontend-lbxdrugs-static
+: 1667542025:0;aa .
+: 1667542077:0;l
+: 1667542079:0;cd static
+: 1667542079:0;k
+: 1667542080:0;l
+: 1667542082:0;cd operation
+: 1667542083:0;l
+: 1667542090:0;aa .
+: 1667542100:0;l
+: 1667542101:0;g st
+: 1667542103:0;..
+: 1667542106:0;l
+: 1667542126:0;mv operation-s1-3rd.js operation-s1-3rds.js operation-s1-element.css ./operation
+: 1667542128:0;l
+: 1667542129:0;cd operation
+: 1667542132:0;cd ..
+: 1667542134:0;..
+: 1667542134:0;g st
+: 1667542136:0;git add .
+: 1667542137:0;g ci
+: 1667542141:0;g pl
+: 1667542144:0;g push
+: 1667542324:0;l
+: 1667542326:0;cd static/operation
+: 1667542326:0;l
+: 1667542455:0;vim 
+: 1667542479:0;aa
+: 1667542480:0;l
+: 1667542482:0;cd hydee-perject
+: 1667542483:0;l
+: 1667542496:0;cd hydee-sp-ui
+: 1667542496:0;l
+: 1667542499:0;vim vue.config.js
+: 1667542533:0;l
+: 1667542534:0;...
+: 1667542536:0;l
+: 1667542544:0;vim vue.config.js
+: 1667542581:0;vim 
+: 1667542706:0;...
+: 1667542710:0;cd hydee-sp-ui
+: 1667542713:0;vim 
+: 1667542772:0;g acp
+: 1667543198:0;ws
+: 1667543526:0;ssh tencent
+: 1667544904:0;a
+: 1667544905:0;aa
+: 1667544906:0;l
+: 1667544911:0;cd analysys-perject
+: 1667544911:0;k
+: 1667544912:0;l
+: 1667544915:0;cd analysys-components
+: 1667544916:0;l
+: 1667544968:0;..
+: 1667544968:0;l
+: 1667544971:0;..
+: 1667544972:0;l
+: 1667544976:0;cd @millionfor
+: 1667544977:0;l
+: 1667544979:0;..
+: 1667544980:0;l
+: 1667545106:0;ssh tencent
+: 1667545438:0;aa
+: 1667545442:0;aa h
+: 1667545443:0;l
+: 1667545446:0;cd frontend-lbxdrugs-static
+: 1667545451:0;g co -b release
+: 1667545453:0;vim 
+: 1667545529:0;g st
+: 1667545530:0;g acp
+: 1667545730:0;ssh tencent
+: 1667545814:0;nrm ls
+: 1667545819:0;ssh tencent
+: 1667545982:0;ssh huaweicloud
+: 1667547096:0;l
+: 1667547102:0;cd hydee-perject/frontend-lbxdrugs-static
+: 1667547102:0;l
+: 1667547107:0;vim 
+: 1667547280:0;g st
+: 1667547282:0;g add .
+: 1667547284:0;g ci
+: 1667547289:0;g pl
+: 1667547291:0;g push
+: 1667547308:0;g lp
+: 1667547403:0;aa h
+: 1667547404:0;l
+: 1667547406:0;cd frontend-lbxdrugs-static
+: 1667547407:0;l
+: 1667547410:0;vim 
+: 1667548021:0;vim ~/.ssh/config
+: 1667548239:0;ssh tencent
+: 1667548720:0;gz
+: 1667548758:0;source ~/.zshrc
+: 1667548761:0;download
+: 1667548762:0;d
+: 1667548771:0;g z
+: 1667548772:0;vim
+: 1667548786:0;cd ~/Download
+: 1667548801:0;source ~/.zshrc
+: 1667548804:0;d
+: 1667548804:0;l
+: 1667548814:0;gz
+: 1667548846:0;source ~/.zshrc
+: 1667548848:0;dt
+: 1667548849:0;l
+: 1667548852:0;dl
+: 1667548874:0;scp aaa.tar.gz huaweiclond:/www/wwwroot/s1.quanquansy.com
+: 1667548891:0;scp aaa.tar.gz huaweicloud:/www/wwwroot/s1.quanquansy.com
+: 1667548986:0;ssh huaweicloud
+: 1667549567:0;l
+: 1667549575:0;ssh tencent
+: 1667549896:0;ssh huaweicloud
+: 1667550098:0;dl
+: 1667550146:0;l
+: 1667550175:0;scp mongo.tar.gz huaweicloud:/root/quanquan/quanquansy/mongodb
+: 1667550590:0;l
+: 1667550633:0;scp admin-server.tar.gz huaweicloud:/root/quanquan/quanquansy/admin-server
+: 1667550808:0;ssh huaweicloud
+: 1667552282:0;gz
+: 1667553250:0;ssh huaweicloud
+: 1667558043:0;ssh tencent
+: 1667558376:0;vim 
+: 1667558771:0;g pl
+: 1667558800:0;vim 
+: 1667562267:0;ssh huaweicloud
+: 1667562757:0;dl
+: 1667562760:0;cd admin-server
+: 1667562762:0;vim
+: 1667563292:0;ssh huaweicloud
+: 1667563296:0;ssh tencent
+: 1667563559:0;dl
+: 1667563581:0;scp admin-server-web.tar.gz huaweicloud:/www/wwwroot/admin.quanquansy.com
+: 1667563717:0;l
+: 1667563724:0;nginx -V
+: 1667563743:0;cd /usr/local/Cellar/nginx/1.17.3_1/bin/nginx
+: 1667563743:0;l
+: 1667563748:0;cd /usr/local/Cellar/nginx/1.17.3_1/
+: 1667563748:0;l
+: 1667563752:0;cd share
+: 1667563752:0;l
+: 1667563754:0;cd nginx
+: 1667563754:0;l
+: 1667563756:0;cd src
+: 1667563756:0;l
+: 1667563758:0;...
+: 1667563759:0;..
+: 1667563759:0;l
+: 1667563760:0;..
+: 1667563760:0;l
+: 1667563762:0;..
+: 1667563763:0;l
+: 1667563766:0;nginx -V
+: 1667563771:0;cd /usr/local/Cellar/nginx/1.17.3_1
+: 1667563772:0;l
+: 1667563777:0;cd html
+: 1667563778:0;l
+: 1667563805:0;..
+: 1667563805:0;l
+: 1667564724:0;cd /
+: 1667564749:0;ssh huaweicloud
+: 1667564752:0;ssh tencent
+: 1667564917:0;l
+: 1667564935:0;scp quanquansy.tar.gz huaweicloud:/www/wwwroot/www.quanquansy.com
+: 1667566326:0;ssh huaweicloud
+: 1667566514:0;vi
+: 1667566571:0;vim
+: 1667566625:0;l
+: 1667567291:0;vim 
+: 1667567334:0;l
+: 1667567338:0;aa
+: 1667567340:0;..
+: 1667567341:0;l
+: 1667567344:0;aa
+: 1667567345:0;l
+: 1667567350:0;cd qsm-projects/Qsm-robot-service
+: 1667567352:0;pwd
+: 1667567355:0;/Users/gongzijian/WebstormProjects/qsm-projects/Qsm-robot-service
+: 1667567411:0;pwd
+: 1667567413:0;/Users/gongzijian/WebstormProjects/qsm-projects/Qsm-robot-service
+: 1667567431:0;pwd
+: 1667567434:0;/Users/gongzijian/WebstormProjects/qsm-projects/Qsm-robot-service
+: 1667567459:0;vim
+: 1667569286:0;aa
+: 1667569294:0;aa .
+: 1667569301:0;cd .watermark
+: 1667569304:0;aa .
+: 1667615770:0;..
+: 1667615772:0;g acp
+: 1667662374:0;s hh
+: 1667691184:0;pwd
+: 1667691186:0;vim
+: 1667722748:0;pm2 log
+: 1667722752:0;ssh tencent
+: 1667722758:0;s hh
+: 1667783727:0;y start
+: 1667783729:0;vim
+: 1667785166:0;g st
+: 1667785171:0;g add .
+: 1667785172:0;g ic
+: 1667785173:0;g ci
+: 1667785421:0;vim package.json
+: 1667785426:0;g st
+: 1667785428:0;git add .
+: 1667785429:0;g ci
+: 1667785437:0;g push
+: 1667785440:0;g pl
+: 1667785443:0;g push
+: 1667785447:0;g co re
+: 1667785451:0;g co release
+: 1667785452:0;g pl
+: 1667785457:0;g merge feat-dialog-v1.0.2
+: 1667785461:0;g push
+: 1667785467:0;g co feat-dialog-v1.0.2
+: 1667785568:0;hss build vue-components test release
+: 1667785724:0;vim package.json
+: 1667785730:0;g add .
+: 1667785730:0;g ci
+: 1667785742:0;g push
+: 1667785747:0;g co release
+: 1667785750:0;g merge feat-dialog-v1.0.2
+: 1667785754:0;g push
+: 1667785756:0;g co feat-dialog-v1.0.2
+: 1667785758:0;hss build vue-components test release
+: 1667787179:0;aa
+: 1667787228:0;cd hydee-perject
+: 1667787231:0;aa h
+: 1667787233:0;l
+: 1667787372:0;cd hydee-sp-ui
+: 1667787373:0;l
+: 1667787375:0;g pl
+: 1667787385:0;y start
+: 1667787390:0;vim
+: 1667787590:0;..
+: 1667787595:0;l
+: 1667787780:0;gz
+: 1667787890:0;cd :q!
+: 1667787900:0;l
+: 1667788425:0;pwd
+: 1667788617:0;l
+: 1667788650:0;echo "source $ZSH/omz/omz.zsh" >> $ZSH/init.zsh
+: 1667788655:0;l
+: 1667788664:0;cd .config
+: 1667788666:0;cd zsh
+: 1667788666:0;L
+: 1667788668:0;l
+: 1667788684:0;cd cache
+: 1667788684:0;l
+: 1667788687:0;..
+: 1667788711:0;cd omz
+: 1667788711:0;l
+: 1667788713:0;..
+: 1667788727:0;cd cache
+: 1667788727:0;l
+: 1667789082:0;vim
+: 1667789213:0;g lp
+: 1667789216:0;g lg
+: 1667789227:0;g ll
+: 1667789233:0;g lp
+: 1667789241:0;g ll
+: 1667789282:0;g lp
+: 1667789293:0;g ll
+: 1667789336:0;source ~/.zshrc
+: 1667789466:0;rm -rf omz
+: 1667789470:0;source ~/.zshrc
+: 1667789476:0;g st
+: 1667789478:0;g lp
+: 1667789538:0;l
+: 1667789545:0;git submodule add https://github.com/yaocccc/omz
+: 1667789549:0;..
+: 1667789550:0;cd zsh
+: 1667789552:0;git submodule add https://github.com/yaocccc/omz
+: 1667789571:0;vim .git/config
+: 1667789584:0;git submodule add https://github.com/yaocccc/omz
+: 1667789586:0;..
+: 1667789588:0;cd zsh
+: 1667789592:0;git submodule add https://github.com/yaocccc/omz
+: 1667789598:0;vim .git/config
+: 1667789631:0;git rm -r --cached imz
+: 1667789635:0;git rm -r --cached omz
+: 1667789638:0;git submodule add https://github.com/yaocccc/omz
+: 1667789640:0;g st
+: 1667789642:0;l
+: 1667789651:0;git submodule add https://github.com/yaocccc/omz --force
+: 1667789656:0;g st
+: 1667789666:0;vim .gitmodules
+: 1667789673:0;rm -rf .gitmodules
+: 1667789674:0;g st
+: 1667789677:0;g acp

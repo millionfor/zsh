@@ -7,3 +7,4 @@ source $ZSH/config/fzf.zsh
 source $ZSH/config/shortcut.zsh
 
 [ -f $ZSH/config/private.zsh ] && source $ZSH/config/private.zsh
+source /Users/gongzijian/.config/zsh/omz/omz.zsh

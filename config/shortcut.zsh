@@ -22,7 +22,16 @@ ws() {
   cd ~/workspace
 }
 
-gg() {
+dl() {
+  cd ~/Downloads
+}
+
+dt() {
+  cd ~/Desktop
+}
+
+
+aa() {
   if [[ ! -z "$1" ]]; then
     if [[ "$1" == "." ]]; then
       eval "open ."
@@ -134,6 +143,12 @@ its() {
 gv() {
   cd ~/.config/nvim && vim
 }
+
+# 进入nvim
+gz() {
+  cd ~/.config/zsh && vim
+}
+
 
 # h
 s() {
