@@ -1,13 +1,11 @@
 
 alias vim='LC_ALL=en_GB.utf-8 nvim'
 
-alias n='LC_ALL=en_GB.utf-8 nvim'
+alias v='LC_ALL=en_GB.utf-8 nvim'
 
 alias g='git'
 
 alias y='yarn'
-
-alias myip='curl ipinfo.io/ip'
 
 alias focusfix='printf "\e[?1004l"'
 
@@ -16,6 +14,13 @@ alias sub="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 # vscode 打开文件
 alias vs="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
+
+# 设置代理
+alias sproxy="export ALL_PROXY=socks5://127.0.0.1:20170" 
+# 取消代理
+alias uproxy="unset ALL_PROXY"
+# 测试代理
+alias tproxy="curl ip.gs"
 
 # 进入工作目录
 ws() {
@@ -137,6 +142,11 @@ its() {
       itermocil $i
     fi
   done
+}
+
+# 查看大小
+dh() {
+  du -h -d 1
 }
 
 # 进入nvim
