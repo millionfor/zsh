@@ -20,7 +20,7 @@ alias sproxy="export ALL_PROXY=socks5://127.0.0.1:20170"
 # 取消代理
 alias uproxy="unset ALL_PROXY"
 # 测试代理
-alias tproxy="curl ip.gs"
+alias tproxy="curl cip.cc"
 
 # 进入工作目录
 ws() {
