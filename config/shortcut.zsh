@@ -6,6 +6,10 @@ alias v='LC_ALL=en_GB.utf-8 nvim'
 alias g='git'
 
 alias y='yarn'
+alias yi='yarn install'
+
+alias p='pnpm'
+alias pi='pnpm install'
 
 alias focusfix='printf "\e[?1004l"'
 
@@ -16,9 +20,9 @@ alias sub="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias vs="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 
 # 设置代理
-alias sproxy="export ALL_PROXY=socks5://127.0.0.1:20170" 
+alias sproxy="export ALL_PROXY=socks5://127.0.0.1:20170; echo '=> 开启代理'; eval 'curl myip.ipip.net'" 
 # 取消代理
-alias uproxy="unset ALL_PROXY"
+alias uproxy="unset ALL_PROXY; echo '=> 关闭代理'; eval 'curl myip.ipip.net'"
 # 测试代理
 alias tproxy="curl cip.cc"
 
