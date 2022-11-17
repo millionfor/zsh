@@ -1,4 +1,6 @@
 
+
+
 alias vim='LC_ALL=en_GB.utf-8 nvim'
 
 alias v='LC_ALL=en_GB.utf-8 nvim'
