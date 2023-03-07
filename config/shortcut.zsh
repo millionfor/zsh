@@ -34,7 +34,7 @@ nu() {
 }
 
 pm2s() {
-  pm2 start npm --name $1 -- run start
+  pm2 start npm --name $1 -- run start --max-restarts 10 --min-uptime 2000
 }
 
 
