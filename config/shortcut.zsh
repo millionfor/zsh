@@ -3,8 +3,6 @@ alias nvim='LC_ALL=en_GB.utf-8 nvim'
 
 alias vim='nvim'
 
-vi() { if [[ $* && -d $* ]] { cd $* && nvim } else { nvim $* } }
-
 alias g='git'
 # git清除缓存
 alias gc='git rm -r --cached .'
