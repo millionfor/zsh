@@ -220,18 +220,3 @@ color() {
     done
     print -cP $colors
 }
-
-# 删除仍回收站
-# export TRASH=~/.Trash
-# rm() {
-#   for f in $*;
-#   do
-#     dir=$TRASH/$(date '+%Y%m%d-%H%M')
-#     target=$dir/${f##*/}
-#     mkdir -p $dir
-#     [ -f $f ] && mv $f $target;
-#     [ -d $f ] && mv $f $target;
-#   done
-# }
-
-
