@@ -1,6 +1,8 @@
-source $OMZ/lib/omz.sh
-source $OMZ/plugins/z.lua/z.lua.plugin.zsh
-source $OMZ/plugins/extract/extract.plugin.zsh
-source $OMZ/plugins/fzf-tab/fzf-tab.zsh
-source $OMZ/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $OMZ/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export ZSH=~/.config/zsh
+
+source $ZSH/lib/omz.sh
+source $ZSH/plugins/z.lua/z.lua.plugin.zsh
+source $ZSH/plugins/extract/extract.plugin.zsh
+source $ZSH/plugins/fzf-tab/fzf-tab.zsh
+source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

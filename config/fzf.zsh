@@ -18,3 +18,4 @@ zstyle ':fzf-tab:complete:git-show:*' fzf-preview 'git show --color=always $word
 zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview '[ -f "$realpath" ] && git diff --color=always $word || git log --color=always $word'
 zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
 export LESSOPEN='| bash $OMZ/lib/file_preview.sh %s'
+
