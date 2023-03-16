@@ -68,6 +68,12 @@ aw() {
   cd ~/workspace
 }
 
+# 进入工作目录g目录
+awg() {
+  cd ~/workspace/g
+}
+
+
 # 进入测试目录
 at() {
   cd ~/WebstormProjects/test
