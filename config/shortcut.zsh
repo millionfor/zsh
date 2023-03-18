@@ -7,7 +7,7 @@ db() {
 
 # 根据镜像运行容器
 dr() {
-  docker run -p $1:$1 $2
+  docker run -it --network="host" -p $1:$1 $2
 }
 
 # 获取镜像列表
