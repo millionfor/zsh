@@ -1,12 +1,31 @@
 
-alias nvim='LC_ALL=en_GB.utf-8 nvim'
+# docker 
+dkb() {
+  docker build -t $1:latest .
+}
 
+dkr() {
+  docker run -p $1:$1 $2:latest
+}
+
+
+# pm2
+pm2s() {
+  pm2 start npm --name $1 -- run start --max-restarts 10 --min-uptime 2000
+}
+
+
+# nvim
+alias nvim='LC_ALL=en_GB.utf-8 nvim'
 alias vim='nvim'
 
+
+# git
 alias g='git'
 # git清除缓存
 alias gc='git rm -r --cached .'
 
+# yarn
 alias y='yarn'
 alias yi='yarn install'
 alias ys='yarn start'
@@ -14,11 +33,13 @@ alias yy='yarn install && yarn start'
 # yarn清除缓存
 alias yc="yarn cache clean"
 
+# pnpm
 alias p='pnpm'
 alias pi='pnpm install'
 alias ps='pnpm start'
 alias pp='pnpm install && pnpm start'
 
+# npm
 alias ni='npm install'
 alias ns='npm run start'
 alias nn='npm install && npm run start'
@@ -30,11 +51,6 @@ alias np="npm publish --access public"
 nu() {
   npm unpublish $1 --force
 }
-
-pm2s() {
-  pm2 start npm --name $1 -- run start --max-restarts 10 --min-uptime 2000
-}
-
 
 alias focusfix='printf "\e[?1004l"'
 
