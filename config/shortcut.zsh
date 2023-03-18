@@ -2,7 +2,7 @@
 # docker 
 # 编译成镜像
 db() {
-  docker build -t "$1:latest" .
+  docker build -t $1 .
 }
 
 # 根据镜像运行容器
