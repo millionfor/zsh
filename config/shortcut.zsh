@@ -1,13 +1,39 @@
 
 # docker 
-dkb() {
+# 编译成镜像
+db() {
   docker build -t $1:latest .
 }
 
-dkr() {
+# 根据镜像运行容器
+dr() {
   docker run -p $1:$1 $2:latest
 }
 
+# 获取镜像列表
+di() {
+  docker images
+}
+
+# 删除单个镜像
+drmi() {
+  docker rmi $1 -f
+}
+
+# 删除单个容器
+drm() {
+  docker rm $1 -f
+}
+
+# 删除所有容器
+drma() {
+  docker rm $(docker ps -aq)
+}
+
+# 通知容器运行
+dt() {
+  docker stop $1
+}
 
 # pm2
 pm2s() {
