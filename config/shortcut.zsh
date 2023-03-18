@@ -15,6 +15,12 @@ di() {
   docker images
 }
 
+# 获取镜像列表
+dp() {
+  docker ps
+}
+
+
 # 删除单个镜像
 drmi() {
   docker rmi $1 -f
