@@ -7,7 +7,7 @@ db() {
 
 # 根据镜像运行容器
 dr() {
-  docker run -p $1:$1 $2:latest
+  docker run -p $1:$1 $2
 }
 
 # 获取镜像列表
