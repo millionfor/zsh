@@ -268,3 +268,7 @@ color() {
     done
     print -cP $colors
 }
+
+sshkey() {
+  ssh-keygen -t rsa -C "$1"
+}
