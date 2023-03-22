@@ -8,5 +8,4 @@ logs/
 *.log
 **/dump.rdb
 **/.DS_Store
-cache/
 themes/
