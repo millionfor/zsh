@@ -41,6 +41,11 @@ dt() {
   docker stop $1
 }
 
+# 查看实时日志
+dl() {
+  docker logs -f $1
+}
+
 # pm2
 pm2s() {
   pm2 start npm --name $1 -- run start --max-restarts 10 --min-uptime 2000
