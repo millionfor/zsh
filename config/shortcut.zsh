@@ -93,9 +93,9 @@ alias sub="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias vs="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 
 # 设置代理
-alias sproxy="export ALL_PROXY=socks5://127.0.0.1:20170; echo -e '=> 开启代理 \c'; eval 'curl myip.ipip.net'" 
+alias sproxy="export ALL_PROXY=socks5://127.0.0.1:20170; echo -e '=> 开启代理 \c'; eval 'curl cip.cc'" 
 # 取消代理
-alias uproxy="unset ALL_PROXY; echo -e '=> 关闭代理 \c'; eval 'curl myip.ipip.net'"
+alias uproxy="unset ALL_PROXY; echo -e '=> 关闭代理 \c'; eval 'curl cip.cc'"
 # 测试代理
 alias tproxy="curl cip.cc"
 

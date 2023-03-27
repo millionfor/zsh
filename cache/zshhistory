@@ -31,3 +31,639 @@
 : 1679449299:0;l
 : 1679449304:0;vim .gitignore
 : 1679449312:0;g acp
+: 1679449443:0;vim ~/.ssh/config
+: 1679449455:0;ssh vps-us1
+: 1679449645:0;sproxy
+: 1679449658:0;ssh vps-us1
+: 1679449707:0;uproxy
+: 1679450054:0;ssh vps-us1
+: 1679450113:0;gv
+: 1679450115:0;g st
+: 1679450118:0;g br -a
+: 1679450123:0;g co master
+: 1679450165:0;l
+: 1679450168:0;g st
+: 1679450171:0;g co feat-v1.0.1
+: 1679450173:0;g br -a
+: 1679450175:0;g st
+: 1679450179:0;g push
+: 1679450185:0;g co master
+: 1679450186:0;l
+: 1679450220:0;vim .gitignore
+: 1679450230:0;g co feat-v1.0.1
+: 1679450232:0;vim .gitignore
+: 1679450417:0;a .
+: 1679450419:0;a.
+: 1679450428:0;gv
+: 1679450430:0;g st
+: 1679450432:0;a.
+: 1679450456:0;g st
+: 1679450464:0;g co master
+: 1679450465:0;l
+: 1679450535:0;rm -rf !(.git)
+: 1679450539:0;g st
+: 1679450541:0;l
+: 1679450580:0;rm -rf yarn.lock snippets plugin plugged package.json lua init.lua ftplugin config colors coc-settings.json cache autoload .netrwhist .gitignore
+: 1679450581:0;l
+: 1679450583:0;g acp
+: 1679450590:0;g br -a
+: 1679450594:0;g merge feat-v1.0.1
+: 1679450604:0;a.
+: 1679450619:0;g st
+: 1679450620:0;g acp
+: 1679450625:0;vim
+: 1679450630:0;vim 
+: 1679450685:0;ah
+: 1679450686:0;l
+: 1679448480:1;vim
+: 1679448548:0;l
+: 1679448550:0;ssh huaweiyun
+: 1679448564:7;vim ~/.ssh/config
+: 1679448573:0;ssh huaweicloud
+: 1679450689:0;cd hydee-merchant-manage
+: 1679450709:0;ps
+: 1679450715:0;vim 
+: 1679450778:0;vim app/.env
+: 1679450798:0;vim 
+: 1679450828:0;gv
+: 1679450835:0;g co feat-v1.0.1
+: 1679450837:0;vim 
+: 1679450886:0;l
+: 1679450894:0;cd cache
+: 1679450895:0;l
+: 1679450901:0;rm -rf undodir viewdir
+: 1679450906:0;vim 
+: 1679450970:0;cd app
+: 1679450973:0;vim .env
+: 1679450981:0;..
+: 1679451270:0;vim 
+: 1679451283:0;ahss
+: 1679451287:0;cd vue-sms-settings
+: 1679451289:0;ah
+: 1679451291:0;l
+: 1679451294:0;cd hydee-merchant-manage
+: 1679451297:0;vim app/.env
+: 1679451311:0;ah
+: 1679451313:0;cd hydee-merchant-manage
+: 1679451315:0;vi
+: 1679451321:0;vi app/.env
+: 1679451426:0;ps
+: 1679451430:0;cd marketing
+: 1679451436:0;ps
+: 1679451493:0;vi
+: 1679451498:0;vi app/.env
+: 1679452016:0;vim .env
+: 1679452019:0;vim 
+: 1679452035:0;ps
+: 1679452049:0;..
+: 1679452049:0;l
+: 1679452058:0;cd vue-select-store
+: 1679452062:0;g pl
+: 1679452065:0;g br -a
+: 1679452074:0;g co feat-fix-v2.0.0-alpha
+: 1679452077:0;g pl
+: 1679452080:0;vi m
+: 1679452083:0;vim
+: 1679452094:0;ps
+: 1679452856:0;g st
+: 1679453198:0;ah
+: 1679453199:0;..
+: 1679453201:0;cd analysys-perject
+: 1679453203:0;cd ark-canary-web
+: 1679453204:0;vim 
+: 1679453663:0;ssh huaweicloud
+: 1679454608:0;vim ~/.ssh/config
+: 1679454616:0;ssh esxi-debian
+: 1679454722:0;ssh esxi-ubuntu
+: 1679454729:0;vim ~/.ssh/config
+: 1679454755:0;uproxy
+: 1679454758:0;ssh esxi-ubuntu
+: 1679454876:0;ssh root@23.234.196.63
+: 1679454985:0;ssh vps-us1
+: 1679455406:0;ssh root@216.127.186.204 -p 22
+: 1679455514:0;ssh root@216.127.186.204
+: 1679455720:0;http://ssh%20root@216.127.186.204/
+: 1679455733:0;ssh root@216.127.186.204
+: 1679455752:0;vim ~/.ssh/known_hosts
+: 1679455762:0;ssh root@216.127.186.204
+: 1679455977:0;uproxy
+: 1679455983:0;ssh root@216.127.186.204
+: 1679455988:0;sproxy
+: 1679455996:0;ssh root@216.127.186.204
+: 1679456273:0;ping 216.127.186.204
+: 1679456279:0;uproxy
+: 1679456281:0;ping 216.127.186.204
+: 1679456284:0;sproxy
+: 1679456292:0;ping 216.127.186.204
+: 1679456303:0;ssh tencent
+: 1679456693:0;ssh root@216.127.186.204
+: 1679456975:0;ssh esxi-ubuntu
+: 1679457011:0;ahss
+: 1679457013:0;cd vue-select-store
+: 1679457014:0;..
+: 1679457016:0;cd vue-sms-settings
+: 1679457025:0;ssh vps-us1
+: 1679457034:0;ssh esxi-debian
+: 1679457292:0;gz
+: 1679457297:0;vim 
+: 1679457413:0;ssh esxi-debian
+: 1679459026:0;vim ~/.gitconfig
+: 1679459095:0;ssh esxi-debian
+: 1679459557:0;vim 
+: 1679459562:0;gv
+: 1679461007:0;ssh esxi-debian
+: 1679462639:0;ssh tencent
+: 1679462882:0;ssh esxi-debian
+: 1679463073:0;vim
+: 1679463888:0;ssh esxi-debian
+: 1679464204:0;ssh tencent
+: 1679464435:0;ssh esxi-debian
+: 1679466736:0;ah
+: 1679466740:0;cd hydee-merchant-manage
+: 1679466743:0;ps
+: 1679466752:0;cd cloud
+: 1679466755:0;..
+: 1679466756:0;cd marketing
+: 1679466762:0;g br -a
+: 1679466787:0;g co feat-cache-v1.0.0
+: 1679466790:0;g lg
+: 1679466793:0;g lp
+: 1679466809:0;cd ..
+: 1679466815:0;cd commodity
+: 1679466817:0;g lp
+: 1679466822:0;cd ..
+: 1679466827:0;cd cloud
+: 1679466829:0;g br -a
+: 1679466833:0;g co feat-cache-v1.0.0
+: 1679466836:0;g lp
+: 1679466851:0;vim 
+: 1679466931:0;cd app
+: 1679466932:0;vim 
+: 1679466977:0;gv
+: 1679467041:0;vim 
+: 1679467050:0;g st
+: 1679467052:0;vim
+: 1679467175:0;vim 
+: 1679467369:0;sproxy
+: 1679467372:0;vim 
+: 1679467460:0;gv
+: 1679467546:0;cd ~/.config
+: 1679467547:0;l
+: 1679467551:0;cd coc/
+: 1679467552:0;l
+: 1679467555:0;cd extensions/node_modules
+: 1679467555:0;l
+: 1679467562:0;rm -rf coc-tsserver
+: 1679467582:0;vim 
+: 1679467617:0;g st
+: 1679467746:0;vim 
+: 1679467781:0;ps
+: 1679468117:0;ssh esxi-debian
+: 1679471139:0;ahs
+: 1679471141:0;ahss
+: 1679471142:0;l
+: 1679471146:0;cd vue-upload
+: 1679471147:0;g st
+: 1679471148:0;g co master
+: 1679471149:0;g pl
+: 1679471316:0;g st
+: 1679471325:0;g lg
+: 1679471497:0;g co -b feat_goods_0316
+: 1679471508:0;vim 
+: 1679471542:0;g co master
+: 1679471547:0;g rmbranch feat_goods_0316
+: 1679471551:0;..
+: 1679471551:0;l
+: 1679471563:0;cd vue-file-export
+: 1679471564:0;g st
+: 1679471565:0;g co master
+: 1679471567:0;g pl
+: 1679471571:0;g br -a
+: 1679471583:0;g co -b feat_goods_0316
+: 1679471586:0;vim 
+: 1679471676:0;ps
+: 1679472080:0;g acp
+: 1679472170:0;g co re
+: 1679472175:0;g co release
+: 1679472179:0;g merge feat_goods_0316
+: 1679472182:0;g push
+: 1679472198:0;hss build vue-file-export test release
+: 1679472403:0;g br -a
+: 1679472406:0;g co feat_goods_0316
+: 1679472410:0;vim package.json
+: 1679472415:0;g acp
+: 1679472428:0;g co release
+: 1679472432:0;g merge feat_goods_0316
+: 1679472436:0;g push
+: 1679472441:0;hss build vue-file-export test release
+: 1679472858:0;g br -a
+: 1679472862:0;g co master
+: 1679472863:0;g merge feat_goods_0316
+: 1679472868:0;g push
+: 1679474056:0;ssh esxi-debian
+: 1679475379:0;gz
+: 1679475469:0;ssh tencent
+: 1679475523:0;ssh esxi-debian
+: 1679475534:0;ssh root@216.127.186.204
+: 1679475547:0;ssh root@192.168.10.116
+: 1679475562:0;ssh quanquan@192.168.10.116
+: 1679475758:0;ssh tencent
+: 1679475985:0;vim ~/.ssh/config
+: 1679476001:0;ssh esxi-debian
+: 1679477268:0;gz
+: 1679483198:0;ssh esxi-debian
+: 1679489419:0;gz
+: 1679490420:0;aw
+: 1679490421:0;awg
+: 1679490428:0;cd Qsm-chatgpt-service
+: 1679490430:0;g st
+: 1679490434:0;g diff Dockerfile
+: 1679490442:0;g diff src/io/index.ts
+: 1679490456:0;g reset --haed
+: 1679490460:0;g reset --hard
+: 1679490462:0;vim 
+: 1679490483:0;g acp
+: 1679491254:0;gz
+: 1679491455:0;vim 
+: 1679491871:0;ssh huaweicloud
+: 1679491985:0;awg
+: 1679491986:0;l
+: 1679491990:0;cd Qsm
+: 1679491992:0;g st
+: 1679491995:0;vim 
+: 1679492155:0;y dev
+: 1679492243:0;ssh huaweicloud
+: 1679492395:0;yarn build
+: 1679492442:0;g st
+: 1679492443:0;g acp
+: 1679492454:0;vim .git/config
+: 1679492475:0;ssh esxi-debian
+: 1679492848:0;npm -v
+: 1679492853:0;node -v
+: 1679493119:0;ssh esxi-debian
+: 1679494072:0;vim .env
+: 1679494167:0;gz
+: 1679494560:0;ssh root@216.127.186.204
+: 1679495002:0;ssh huaweicloud
+: 1679495023:0;ssh esxi-debian
+: 1679495160:0;ssh root@216.127.186.204 -p 22
+: 1679495169:0;vim ~/.ssh/known_hosts
+: 1679495383:0;ssh root@216.127.186.204 -p 22\
+
+: 1679495396:0;ssh vps-us1
+: 1679495465:0;ssh root@216.127.186.204 -p 22\
+
+: 1679495812:0;ssh vps-us1
+: 1679495820:0;ssh root@216.127.186.204
+: 1679495838:0;ssh tencent
+: 1679496066:0;ssh root@216.127.186.204
+: 1679496323:0;sproxy
+: 1679496327:0;ssh root@216.127.186.204
+: 1679533272:0;ah
+: 1679533273:0;l
+: 1679533276:0;cd hydee-sp-ui
+: 1679533277:0;g st
+: 1679533280:0;..
+: 1679533280:0;l
+: 1679533287:0;cd smart-bi-h5
+: 1679533289:0;g st
+: 1679533293:0;node -v
+: 1679533295:0;ps
+: 1679533298:0;vim package.json
+: 1679533302:0;y dev
+: 1679533351:0;vim 
+: 1679533387:0;y dev
+: 1679533555:0;y serve
+: 1679533658:0;g st
+: 1679533659:0;g acp
+: 1679533671:0;g up
+: 1679533686:0;..
+: 1679533688:0;cd marketing
+: 1679533689:0;vim 
+: 1679533761:0;g br -a
+: 1679533771:0;g co feat_m_v2.3.7.8
+: 1679533772:0;g pl
+: 1679533776:0;ps
+: 1679533814:0;y serve
+: 1679533891:0;vim 
+: 1679533902:0;vim .env
+: 1679534106:0;l
+: 1679534130:0;vim .eslintignore
+: 1679535215:0;y serve
+: 1679535425:0;yarn build:dev
+: 1679535449:0;gcp
+: 1679535455:0;gap
+: 1679535457:0;gcp
+: 1679535462:0;g acp
+: 1679537401:0;g st
+: 1679537404:0;g co feat-cache-v1.0.0
+: 1679537412:0;ps
+: 1679537426:0;vim
+: 1679537702:0;ssh esxi-debian
+: 1679538108:0;g st
+: 1679541539:0;..
+: 1679541539:0;l
+: 1679541541:0;..
+: 1679541545:0;cd smart-bi-h5
+: 1679541550:0;vim package.json
+: 1679542320:0;ssh esxi-debian
+: 1679542576:0;g st
+: 1679542581:0;g diff .build/webpack.config.dev.js
+: 1679542584:0;ps
+: 1679542663:0;vim
+: 1679543392:0;g acp
+: 1679543422:0;hss build vue-sms-settings test master
+: 1679543653:0;vim vue.config.js
+: 1679543742:0;cd node_modules/@hydee/static-upload-loader
+: 1679543744:0;k
+: 1679543745:0;l
+: 1679543745:0;vim 
+: 1679545052:0;ssh esxi-debian
+: 1679550392:0;vim 
+: 1679550416:0;..
+: 1679550417:0;vim 
+: 1679550435:0;l
+: 1679550436:0;g st
+: 1679550525:0;rm -rf node_modules
+: 1679550540:0;l
+: 1679550543:0;..
+: 1679550543:0;l
+: 1679550547:0;rm -rf node_modules
+: 1679550565:0;cd app
+: 1679550566:0;vim 
+: 1679550574:0;l
+: 1679550578:0;..
+: 1679550579:0;g st
+: 1679550617:0;rm -rf .DS_Store
+: 1679550620:0;l
+: 1679550624:0;vim package.json
+: 1679550645:0;l
+: 1679550646:0;..
+: 1679550647:0;git st
+: 1679550654:0;vim .git/config
+: 1679550670:0;aw
+: 1679550671:0;l
+: 1679550684:0;ah
+: 1679550685:0;l
+: 1679550689:0;g clone git@10.200.25.127:client/hydee-merchant-platform-ui.git
+: 1679550693:0;cd hydee-merchant-platform-ui
+: 1679550694:0;vim package.json
+: 1679550700:0;l
+: 1679550708:0;cd app
+: 1679550712:0;..
+: 1679550714:0;a.
+: 1679550717:0;..
+: 1679550718:0;a.
+: 1679550758:0;g st
+: 1679550760:0;l
+: 1679550764:0;pi
+: 1679550802:0;ps
+: 1679550815:0;l
+: 1679550817:0;..
+: 1679550819:0;l
+: 1679550821:0;hydee-merchant-platform-ui
+: 1679550824:0;vim package.json
+: 1679550830:0;cd app
+: 1679550831:0;pi
+: 1679550889:0;..
+: 1679550890:0;ps
+: 1679550903:0;vim 
+: 1679550935:0;vim app/package.json
+: 1679550945:0;..
+: 1679550946:0;l
+: 1679550950:0;cd hydee-merchant-platform-ui
+: 1679550951:0;l
+: 1679550955:0;rm -rf node_modules
+: 1679550962:0;cd app
+: 1679550966:0;rm -rf node_modules
+: 1679550976:0;vim 
+: 1679551011:0;l
+: 1679551016:0;g st
+: 1679551019:0;..
+: 1679551020:0;g st
+: 1679551022:0;l
+: 1679551027:0;rm -rf package-lock.json
+: 1679551029:0;yarn.lock
+: 1679551032:0;rm -rf yarn.lock
+: 1679551034:0;vim package.json
+: 1679551055:0;g st
+: 1679551058:0;..
+: 1679551084:0;rm -rf hydee-merchant-platform-ui
+: 1679551087:0;cd hydee-merchant-manage
+: 1679551088:0;l
+: 1679551089:0;g st
+: 1679551097:0;cd app
+: 1679551098:0;yarn
+: 1679551395:0;..
+: 1679551396:0;ps
+: 1679551608:0;cd marketing
+: 1679551609:0;vim package.json
+: 1679551640:0;yarn i
+: 1679551761:0;ps
+: 1679551791:0;vim package.json
+: 1679551796:0;l
+: 1679551802:0;rm -rf package-lock.json
+: 1679551803:0;vim package.json
+: 1679551810:0;cd app
+: 1679551811:0;l
+: 1679551820:0;rm -rf package-lock.json yarn.lock
+: 1679551822:0;vim package.json
+: 1679551829:0;l
+: 1679551832:0;cd app
+: 1679551833:0;l
+: 1679552265:0;ps
+: 1679552272:0;g br -a
+: 1679552290:0;g co feat-cache-v1.0.0
+: 1679552302:0;..
+: 1679552305:0;cloud
+: 1679552308:0;..
+: 1679552367:0;cd marketing
+: 1679552368:0;g co feat-cache-v1.0.0
+: 1679552383:0;..
+: 1679552384:0;cd commodity
+: 1679552385:0;g st
+: 1679552740:0;g co app/src/js/module/layout/_source/tagViewItem.vue
+: 1679552743:0;g acp
+: 1679552772:0;ps
+: 1679552779:0;cd app
+: 1679552780:0;l
+: 1679552781:0;cd src
+: 1679552782:0;vim 
+: 1679552812:0;l
+: 1679552823:0;mv .git .gitaa
+: 1679552825:0;vim 
+: 1679552835:0;vim package.json
+: 1679552842:0;g st
+: 1679552843:0;l
+: 1679552850:0;vim 
+: 1679552861:0;l
+: 1679552865:0;mv .gitaa .git
+: 1679552866:0;g st
+: 1679553202:0;vim a.vue
+: 1679553245:0;..
+: 1679553254:0;mv hydee-merchant-manage hydee-merchant-platform-ui
+: 1679553257:0;cd hydee-merchant-platform-ui
+: 1679553261:0;..
+: 1679553263:0;cd ..
+: 1679553265:0;hydee-merchant-platform-ui
+: 1679553267:0;ps
+: 1679553275:0;vim 
+: 1679553295:0;vim package.json
+: 1679553341:0;ps
+: 1679553662:0;pi
+: 1679553682:0;ps
+: 1679555995:0;g st
+: 1679555996:0;vim
+: 1679557036:0;ps
+: 1679557112:0;g st
+: 1679557114:0;g co master
+: 1679557115:0;g pl
+: 1679557121:0;g co feat-cache-v1.0.0
+: 1679557125:0;g merge master
+: 1679557131:0;pi
+: 1679557137:0;ps
+: 1679557152:0;vim package.json
+: 1679557164:0;pi
+: 1679557193:0;ps
+: 1679557226:0;vim package.json
+: 1679557231:0;pi
+: 1679557246:0;ps
+: 1679557304:0;vim package.json
+: 1679557327:0;pi
+: 1679557394:0;ps
+: 1679557471:0;vim package.json
+: 1679557474:0;pi
+: 1679557499:0;ps
+: 1679557542:0;g st
+: 1679557546:0;g acp
+: 1679559920:0;vim .env
+: 1679559923:0;vim 
+: 1679559941:0;ps
+: 1679561491:0;ahss
+: 1679561494:0;cd vue-components
+: 1679561495:0;vim 
+: 1679562073:0;g acp
+: 1679562087:0;hss build vue-sms-settings test master
+: 1679563583:0;g st
+: 1679563585:0;g acp
+: 1679563598:0;hss build vue-sms-settings test master
+: 1679563653:0;g acp
+: 1679563663:0;hss build vue-sms-settings test master
+: 1679563893:0;ps
+: 1679585645:0;cd ..
+: 1679585648:0;cd ahs
+: 1679585652:0;cd ha
+: 1679585654:0;ah
+: 1679585658:0;cd smart-bi-h5
+: 1679585659:0;g co master
+: 1679585661:0;g pl
+: 1679585663:0;vi m
+: 1679585667:0;vim vue.config.js
+: 1679585705:0;g st
+: 1679585707:0;git add .
+: 1679585707:0;g ci
+: 1679585721:0;g push
+: 1679622878:0;g st
+: 1679622880:0;g acp
+: 1679622922:0;hss build vue-sms-settings test master
+: 1679823529:0;sproxy
+: 1679823569:0;curl https://api.openai.com/v1/chat/completions \\
+  -H 'Content-Type: application/json' \\
+  -H 'Authorization: Bearer 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' \\
+  -d '{\
+  "model": "gpt-3.5-turbo",\
+  "max_tokens": 10,\
+  "messages": [{"role": "user", "content": "112+1000ç­ƒ©äºƒ®å¤ƒºå°ƒ±"}]\
+}'
+: 1679824962:0;sproxy
+: 1679824971:0;curl https://api.openai.com/v1/chat/completions \\
+  -H 'Content-Type: application/json' \\
+  -H 'Authorization: Bearer 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' \\
+  -d '{\
+  "model": "gpt-3.5-turbo",\
+  "max_tokens": 10,\
+  "messages": [{"role": "user", "content": "112+1000ç­ƒ©äºƒ®å¤ƒºå°ƒ±"}]\
+}'
+: 1679825021:0;ssh tencent
+: 1679825597:0;ssh root@64.112.43.27 -p 22\
+
+: 1679826639:0;vim /Users/gongzijian/.ssh/known_hosts
+: 1679826646:0;ssh root@64.112.43.27 -p 22\
+
+: 1679826679:0;ssh tencent
+: 1679826720:0;ssh vps-us1
+: 1679826731:0;vim ~/.ssh/config
+: 1679826740:0;ssh vps-us1
+: 1679828285:0;curl https://api.openai.com/v1/chat/completions \\
+  -H 'Content-Type: application/json' \\
+  -H 'Authorization: Bearer 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' \\
+  -d '{\
+  "model": "gpt-3.5-turbo",\
+  "max_tokens": 10,\
+  "messages": [{"role": "user", "content": "112+1000ç­ƒ©äºƒ®å¤ƒºå°ƒ±"}]\
+}'
+: 1679828404:0;vim ~/.ssh/known_hosts
+: 1679828412:0;ssh vps-us1
+: 1679828439:0;ssh root@64.112.43.27 -p 22\
+
+: 1679828689:0;ssh vps-us1
+: 1679836619:0;vim ~/.ssh/known_hosts
+: 1679836628:0;ssh root@64.112.43.27
+: 1679837436:0;vim ~/.ssh/known_hosts
+: 1679837452:0;ssh root@64.112.43.27
+: 1679839260:0;vim ~/.ssh/known_hosts
+: 1679839309:0;ssh root@64.112.43.27
+: 1679839594:0;ping v.quanquansy.com
+: 1679839602:0;curl https://v.quanquansy.com/
+: 1679878590:0;ssh root@64.112.43.27
+: 1679879873:0;curl https://api.openai.com/v1/chat/completions \\
+  -H 'Content-Type: application/json' \\
+  -H 'Authorization: Bearer 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' \\
+  -d '{\
+  "model": "gpt-3.5-turbo",\
+  "max_tokens": 10,\
+  "messages": [{"role": "user", "content": "112+1000ç­ƒ©äºƒ®å¤ƒºå°ƒ±"}]\
+}'
+: 1679879891:0;sproxy
+: 1679879896:0;curl https://api.openai.com/v1/chat/completions \\
+  -H 'Content-Type: application/json' \\
+  -H 'Authorization: Bearer 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' \\
+  -d '{\
+  "model": "gpt-3.5-turbo",\
+  "max_tokens": 10,\
+  "messages": [{"role": "user", "content": "112+1000ç­ƒ©äºƒ®å¤ƒºå°ƒ±"}]\
+}'
+: 1679880374:0;ps
+: 1679885055:0;g acp
+: 1679885072:0;hss build vue-sms-settings test master
+: 1679885717:0;vim ~/.ssh/known_hosts
+: 1679885726:0;ssh root@64.112.43.27 -p 22
+: 1679885759:0;ssh root@64.112.43.27
+: 1679885765:0;uproxy
+: 1679885768:0;ssh root@64.112.43.27
+: 1679885795:0;sproxy
+: 1679885798:0;ssh root@64.112.43.27
+: 1679887526:0;vim ~/.ssh/known_hosts
+: 1679887593:0;ssh root@64.112.43.27
+: 1679892958:0;sproxy
+: 1679892962:0;curl https://api.openai.com/v1/chat/completions \\
+  -H 'Content-Type: application/json' \\
+  -H 'Authorization: Bearer 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' \\
+  -d '{\
+  "model": "gpt-3.5-turbo",\
+  "max_tokens": 10,\
+  "messages": [{"role": "user", "content": "112+1000ç­ƒ©äºƒ®å¤ƒºå°ƒ±"}]\
+}'
+: 1679893155:0;ssh esxi-debian
+: 1679893533:0;ssh root@64.112.43.27
+: 1679893562:0;ssh vps-us1
+: 1679893572:0;ssh root@64.112.43.27
+: 1679893732:0;vim 
+: 1679894044:0;ssh tencent
+: 1679894590:0;ssh vps-us1
+: 1679894612:0;ssh esxi-ubuntu
+: 1679895346:0;gz
+: 1679895407:0;source ~/.zshrc
+: 1679895413:0;sproxy
+: 1679895441:0;g st
+: 1679895444:0;g acp
