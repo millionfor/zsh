@@ -2,7 +2,7 @@
 # docker 
 # 编译成镜像
 db() {
-  docker build -t $1 .
+  docker build --network=host -t $1 .
 }
 
 # 根据镜像运行容器
