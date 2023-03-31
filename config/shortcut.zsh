@@ -6,7 +6,7 @@ db() {
 }
 
 # 根据镜像运行容器
-# dr 3100 qsm-robot-service PORT=3100 ENV_TYPE=wx CONNECTION_SETTING=xxxxx CHANNEL=xxxx CONNECT=xxxx
+# dr 名称 端口 镜像名 PORT=3100 ENV_TYPE=wx CONNECTION_SETTING=xxxxx CHANNEL=xxxx CONNECT=xxxx
 dr() {
   local name="$1"
   local port="$2"
