@@ -35,6 +35,8 @@ fork自 oh my zsh，更纯净 更快速
   On Ubuntu: apt install fd-find && ln -s $(which fdfind)
   On Debian: sudo apt-get install fd-find && ln -s $(which fdfind) ~/.local/bin/fd
 
+   ag sudo apt-get install silversearcher-ag
+
   请自行安装fzf
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   ~/.fzf/install
