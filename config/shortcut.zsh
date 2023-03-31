@@ -1,5 +1,5 @@
 
-# docker 
+# docker $@
 # 编译成镜像
 db() {
   docker build --network=host -t $1 .
@@ -7,7 +7,7 @@ db() {
 
 # 根据镜像运行容器
 dr() {
-  docker run --restart=always -it --network=host -p $1 -d $2 
+  docker run --restart=always -it --network=host $@ -p $1 -d $2 
 }
 
 # 获取镜像列表
