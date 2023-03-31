@@ -8,15 +8,16 @@ db() {
 # 根据镜像运行容器
 # dr 3100 qsm-robot-service PORT=3100 ENV_TYPE=wx CONNECTION_SETTING=xxxxx CHANNEL=xxxx CONNECT=xxxx
 dr() {
-  local port="$1"
-  local image="$2"
-  shift 2
+  local name="$1"
+  local port="$2"
+  local image="$3"
+  shift 3
   local env_args=()
   while [[ "$#" -gt 0 ]]; do
     env_args+=("-e" "$1")
     shift
   done
-  docker run --restart=always "${env_args[@]}" --network=host -p "$port:$port" -d "$image"
+  docker run --name=$name --restart=always "${env_args[@]}" --network=host -p "$port:$port" -d "$image"
 }
 
 # 获取镜像列表
