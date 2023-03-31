@@ -8,9 +8,6 @@ db() {
 # 根据镜像运行容器
 # dr 3100 qsm-robot-service PORT=3100 ENV_TYPE=wx CONNECTION_SETTING=xxxxx CHANNEL=xxxx CONNECT=xxxx
 dr() {
-  echo "port = $port"
-echo "image = $image"
-echo "env_args = ${env_args[@]}"
   local port="$1"
   local image="$2"
   shift 2
@@ -19,8 +16,6 @@ echo "env_args = ${env_args[@]}"
     env_args+=("-e" "$1")
     shift
   done
-
-
   docker run --restart=always "${env_args[@]}" --network=host -p "$port:$port" -d "$image"
 }
 
