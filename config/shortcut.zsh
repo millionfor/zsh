@@ -2,7 +2,14 @@
 # docker $@
 # 编译成镜像
 db() {
-  docker build --network=host -t $1 .
+  local name="$1"
+  shift 1
+  local env_args=()
+  while [[ "$#" -gt 0 ]]; do
+    env_args+=("--build-arg" "$1")
+    shift
+  done
+  docker build "${env_args[@]}" --network=host -t $name .
 }
 
 # 根据镜像运行容器
