@@ -24,6 +24,7 @@ dr() {
     env_args+=("-e" "$1")
     shift
   done
+  echo "-e" + " ${env_args[@]}"
   docker run --name=$name --restart=always "-e" + " ${env_args[@]}" --network=host -p "$port:$port" -d "$image"
 }
 
