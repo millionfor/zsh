@@ -17,7 +17,7 @@ dr() {
     env_args+=("-e" "$1")
     shift
   done
-  docker run --name=$name --restart=always "${env_args[@]}" --network=host -p "$port:$port" -d "$image"
+  docker run --name=$name --restart=always "-e" + " ${env_args[@]}" --network=host -p "$port:$port" -d "$image"
 }
 
 # 获取镜像列表
