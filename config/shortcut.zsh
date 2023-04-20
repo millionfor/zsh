@@ -53,7 +53,7 @@ drma() {
   docker rm $(docker ps -aq)
 }
 
-# 通知容器运行
+# 停止容器运行
 dt() {
   docker stop $1
 }
@@ -61,6 +61,11 @@ dt() {
 # 查看实时日志
 dl() {
   docker logs -f $1
+}
+
+# 进入容器
+de() {
+  docker exec -it $1 /bin/bash
 }
 
 # pm2
