@@ -64,8 +64,12 @@ dl() {
 }
 
 # 进入容器
-de() {
+dep() {
   docker exec -it $1 /bin/bash
+}
+
+dei() {
+  docker run -it $1 /bin/bash
 }
 
 # pm2
