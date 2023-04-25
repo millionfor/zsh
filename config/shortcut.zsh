@@ -77,7 +77,6 @@ pm2s() {
   pm2 start npm --name $1 -- run start --max-restarts 10 --min-uptime 2000
 }
 
-
 # nvim
 alias nvim='LC_ALL=en_GB.utf-8 nvim'
 alias vim='nvim'
@@ -163,8 +162,18 @@ ad() {
 }
 
 # 进入桌面目录
-adt() {
+ade() {
   cd ~/Desktop
+}
+
+# 进入qsm
+qsm() {
+  cd ~/workspace/g/Qsm
+}
+
+# 进入qsm
+wx() {
+  cd ~/workspace/g/Qsm-wx-service
 }
 
 
