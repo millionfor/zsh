@@ -312,3 +312,13 @@ color() {
 sshkey() {
   ssh-keygen -t rsa -C "$1"
 }
+
+config() {
+  cd ~/.config
+}
+
+
+#------------------------------
+cpost() {
+  curl -X POST -H "Content-Type: application/json" -d $1 $2
+}

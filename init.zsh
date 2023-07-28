@@ -4,6 +4,7 @@ source $ZSH/config/shortcut.zsh
 source $ZSH/config/exports.zsh
 source $ZSH/config/omz.zsh
 source $ZSH/config/fzf.zsh
+source $ZSH/config/iterm2.zsh
 source $ZSH/themes/*.zsh-theme
 
 
