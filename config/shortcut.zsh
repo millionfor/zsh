@@ -96,10 +96,10 @@ alias yy='yarn install && yarn start'
 alias yc="yarn cache clean"
 
 # pnpm
-alias p='pnpm'
-alias pi='pnpm install'
-alias ps='pnpm start'
-alias pp='pnpm install && pnpm start'
+alias pn='pnpm'
+alias pni='pnpm install'
+alias pns='pnpm start'
+alias pnp='pnpm install && pnpm start'
 
 # npm
 alias ni='npm install'
