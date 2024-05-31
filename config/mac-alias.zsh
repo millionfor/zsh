@@ -43,6 +43,10 @@ awg() {
   cd ~/workspace/g
 }
 
+# 进入工作目录g目录
+gg() {
+  cd ~/workspace/gg
+}
 
 # 进入测试目录
 at() {
