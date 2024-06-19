@@ -63,6 +63,13 @@ ad() {
 ade() {
   cd ~/Desktop
 }
+des()
+{
+    curFinderDir=`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`
+    echo "\033[31m$curFinderDir\033[0m"
+    cd $curFinderDir
+}
+
 
 # 进入qsm
 qsm() {
@@ -109,8 +116,21 @@ its() {
 }
 
 # config 目录
-config() {
+cf() {
   cd ~/.config
+}
+
+# 清除缓存
+macc() {
+  echo "=> 清除{yarn}缓存..."
+  yarn cache clean
+  echo "\n=> 清除{npm}缓存..."
+  npm cache clean --force
+  echo "\n=> 清除{pnpm}缓存..."
+  pnpm store prune
+  echo "\n=> 清除{废纸篓}..."
+  sudo rm -rf "~/.Trash/*"
+
 }
 
 

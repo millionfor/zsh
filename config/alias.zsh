@@ -2,7 +2,7 @@
 # vim: set ft=sh fdm=manual ts=2 sw=2 sts=2 tw=85 et:
 
 # =======================================================
-# Description:     
+# Description:
 # Filename:        alias.sh
 # Author           QuanQuan <millionfor@apache.org>
 # Last Modified    Tue, Apr 30, 2024 14:55
@@ -10,6 +10,25 @@
 # GistURL          https://gist.github.com/millionfor/%Gist_ID%
 # =======================================================
 
+# core ---------------------
+# 自定义删除功能并确认目录
+r() {
+  for arg in "$@"; do
+    if [ -d "$arg" ]; then
+      read "choice?Do you really want to delete $arg and its contents? [Y/N] "
+      case "$choice" in
+        [yY]) rm -rf "$arg" ;;
+        [nN]) continue ;;
+        *) echo "Invalid choice. Aborting." && return ;;
+      esac
+    else
+      rm -i "$arg"
+    fi
+  done
+}
+
+# 查看目录下文件夹大小按照大小排序
+alias du='du -sh * | sort -hr'
 
 # nvim ---------------------
 alias nvim='LC_ALL=en_GB.utf-8 nvim'
@@ -121,7 +140,6 @@ gz() {
   cd ~/.config/zsh && vim
 }
 
-
 # https://github.com/jesseduffield/lazygit
 lg() {
   export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
@@ -142,8 +160,7 @@ s() {
 color() {
   local -a colors
   for i in {000..255}; do
-      colors+=("%F{$i}$i%f")
+    colors+=("%F{$i}$i%f")
   done
   print -cP $colors
 }
-
