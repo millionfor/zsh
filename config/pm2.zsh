@@ -13,5 +13,21 @@
 
 # pm2
 pm2s() {
-  pm2 start npm --name $1 -- run start --max-restarts 10 --min-uptime 2000
+  name=${1:-test}
+  pm2 start npm --name $name -- run start --max-restarts 10 --min-uptime 2000
+}
+
+pm2del() {
+  name=${1:-test}
+  pm2 delete $name
+}
+
+pm2rs() {
+  name=${1:-test}
+  pm2 restart $name
+}
+
+pm2log() {
+  lines=${1:-100}
+  pm2 logs --lines $lines
 }
