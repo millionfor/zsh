@@ -82,6 +82,10 @@ dei() {
   docker run -it $1 /bin/bash
 }
 
+drs() {
+  docker restart $1
+}
+
 # docker ---------------------
 alias focusfix='printf "\e[?1004l"'
 
