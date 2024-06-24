@@ -11,23 +11,32 @@
 # =======================================================
 
 
-# pm2
-pm2s() {
-  name=${1:-test}
-  pm2 start npm --name $name -- run start --max-restarts 10 --min-uptime 2000
+# 启动
+p2s() {
+  dir_name=$(basename "$(pwd)")
+  name=${1:-$dir_name}
+  pm2 start npm --name $name -- run start --max-restarts 10 
 }
 
-pm2del() {
+# 删除
+p2d() {
   name=${1:-test}
   pm2 delete $name
 }
 
-pm2rs() {
+# 重启
+p2r() {
   name=${1:-test}
   pm2 restart $name
 }
 
-pm2log() {
+# 列表
+p2l () {
+  pm2 list
+}
+
+# 日志
+p2lg() {
   lines=${1:-100}
   pm2 logs --lines $lines
 }
