@@ -1,65 +1,81 @@
-# o╦╗
+# zsh
 
-fork自 oh my zsh，更纯净 更快速
+一个基于zsh的配置文件
 
-## USAGE
+Debian12 + zsh 
+
+## Usage
+
+### Zsh
 
 ```shell
+# 更新系统包列表
+sudo apt update
 
-  # 进入你的zsh配置目录 例如 ~/.config/zsh
-  cd ~/.config/zsh
-  git submodule add https://github.com/yaocccc/omz
+# 安装Zsh
+sudo apt install zsh
 
-  # 在你的zsh配置里 source ~/.config/zsh/omz/omz.zsh (举例)
-  echo "source $ZSH/omz/omz.zsh" >> $ZSH/init.zsh
+# 查看当前使用的shell
+echo $SHELL
+
+# 更改当前用户的默认shell
+chsh -s $(which zsh)
+
+# 退出并重新登录，或者重新启动系统，以使更改生效
+
 ```
 
-## UPDATE
+一旦安装完成，你可以通过编辑~/.zshrc文件来配置Zsh环境
 
-```plaintext
-  cd $OMZ && git pull
+### Oh My Zsh
+
+```shell
+# 安装oh-my-zsh插件管理器（可选）
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-## REQUIRES
+### 安装插件
 
-- zsh
 - fzf
+```shell
+sudo apt install fzf
+```
+
 - fd
-- bat (可选 更好的文本预览效果)
+```shell
+On macOS: brew install fd
+On Arch Linux: pacman -S fd
+On Ubuntu: apt install fd-find && ln -s $(which fdfind)
+On Debian: sudo apt-get install fd-find && ln -s $(which fdfind) ~/.local/bin/fd
+```
+
+- bat (可选 更好的文本预览效果) 注意版本 0.12.1,其他版本可能无法正常使用
+```shell
+wget https://github.com/sharkdp/bat/releases/download/v0.12.1/bat_0.12.1_amd64.deb
+
+sudo dpkg -i bat_0.12.1_amd64.deb
+
+```
+
+
+- ag (可选 更好的搜索效果)
+```shell
+sudo apt-get install silversearcher-ag
+```
+
 - exa (可选 更好的目录预览效果)
 
-```plaintext
-  请自行安装fd
-  On macOS: brew install fd
-  On Arch Linux: pacman -S fd
-  On Ubuntu: apt install fd-find && ln -s $(which fdfind)
-  On Debian: sudo apt-get install fd-find && ln -s $(which fdfind) ~/.local/bin/fd
-
-   ag sudo apt-get install silversearcher-ag
-
-  请自行安装fzf
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install
+```shell
+sudo apt install exa
 ```
 
-## CONFIGURATION
 
-```plaintext
-# 以下env如果需要请在source omz.zsh 前定义
-
-_OMZ_APPLY_PREEXEC_HOOK
-  是否允许OMZ开启"命令发生前"相关hook
-  默认true
-  行为:
-    1. 执行命令前 将修改当前终端会话的title为: $cmd
-
-_OMZ_APPLY_CHPWD_HOOK
-  是否允许OMZ开启"pwd变更后"相关hook
-  默认true
-  行为:
-    1. 载入时，会自动切换到上一次cd过的目录
-    2. 发生cd命令时，自动记录当前cd的目录(在缓存文件中)
+- fzf (可选 更好的目录预览效果)
+```shell
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 ```
+
 
 ## PLUGINS
 
@@ -83,23 +99,3 @@ _OMZ_APPLY_CHPWD_HOOK
 5. fzf-tab  
     > tab时使用fzf进行候选选择  
 
-## 配置目录结构
-
-```plaintext
-omz
-  ├── cache/              -- 部分需要缓存的配置
-  ├── lib/                -- 部分依赖文件
-  │   ├── omz.sh          -- omz.sh
-  │   └── file_preview.sh -- 文件预览脚本 for fzf
-  ├── config/
-  │   ├── fzf.zsh         -- fzf 及 fzf-tab配置
-  │   ├── git.zsh         -- git相关配置
-  │   ├── hook.zsh        -- 命令或启动钩子配置
-  │   └── omz.zsh         -- omz基础配置
-  ├── plugins/            -- 插件
-  ├── themes/             -- 主题
-  ├── omz.zsh             -- 配置入口
-  └── README.md           -- README
-```
-
-![avatar](./screenshots/show.gif)
