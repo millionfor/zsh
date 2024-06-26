@@ -31,7 +31,7 @@ r() {
 alias du='du -sh * | sort -hr'
 
 # nvim ---------------------
-alias nvim='LC_ALL=en_GB.utf-8 nvim'
+# alias nvim='LC_ALL=en_GB.utf-8 nvim'
 alias vim='nvim'
 
 # git ---------------------
