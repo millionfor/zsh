@@ -89,3 +89,7 @@ drs() {
 # docker ---------------------
 alias focusfix='printf "\e[?1004l"'
 
+
+dc(){
+  docker-compose -f docker-compose.$1.yml up -d
+}
