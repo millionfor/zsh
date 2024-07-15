@@ -91,5 +91,11 @@ alias focusfix='printf "\e[?1004l"'
 
 
 dc(){
-  docker-compose -f docker-compose.$1.yml up -d
+  _dc_env=$1
+  if [ -z "$1" ]; then
+    _dc_env="yml"
+  else
+    _dc_env="$1.yml"
+  fi
+  docker-compose -f docker-compose.${_dc_env} up -d
 }
