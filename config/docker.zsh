@@ -90,6 +90,7 @@ drs() {
 alias focusfix='printf "\e[?1004l"'
 
 
+# docker-compose 启动
 dc(){
   _dc_env=$1
   if [ -z "$1" ]; then
