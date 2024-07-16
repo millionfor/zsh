@@ -130,7 +130,10 @@ macc() {
   pnpm store prune
   echo "\n=> 清除{废纸篓}..."
   sudo rm -rf "~/.Trash/*"
-
 }
 
+# 清除DNS缓存
+cldns () {
+  sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+}
 
