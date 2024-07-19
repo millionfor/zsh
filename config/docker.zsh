@@ -70,7 +70,7 @@ dt() {
 
 # 查看实时日志
 dl() {
-  docker logs --tail ${2:-100} $1
+  docker logs --tail ${2:-500} $1
 }
 
 # 进入容器
