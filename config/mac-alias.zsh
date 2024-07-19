@@ -137,3 +137,6 @@ cldns () {
   sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
 }
 
+hhh() {
+   echo "dieLahng4sheeth3ma" && ssh dev@10.200.26.155 -p 22 
+}
