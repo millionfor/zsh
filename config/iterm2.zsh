@@ -33,7 +33,7 @@ hydee() {
 }
 
 # ok ws
-ws() {
-  osascript -e 'tell application "iTerm" to activate'
-  osascript -e 'tell application "System Events" to keystroke "p" using option down'
-}
+# ws() {
+#   osascript -e 'tell application "iTerm" to activate'
+#   osascript -e 'tell application "System Events" to keystroke "p" using option down'
+# }

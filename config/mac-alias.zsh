@@ -137,6 +137,13 @@ cldns () {
   sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
 }
 
-hhh() {
-   echo "dieLahng4sheeth3ma" && ssh dev@10.200.26.155 -p 22 
+# 进入synology cloud
+sd() {
+  cd /Users/gongzijian/SynologyDrive
 }
+
+# 进入工作目录
+ws() {
+  cd ~/workspace
+}
+
