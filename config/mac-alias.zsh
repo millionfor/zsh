@@ -40,7 +40,7 @@ aw() {
 
 # 进入工作目录g目录
 awg() {
-  cd ~/workspace/g
+  cd ~/workspace/gitlabs
 }
 
 # 进入工作目录g目录
