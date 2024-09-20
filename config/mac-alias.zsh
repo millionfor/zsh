@@ -17,7 +17,7 @@ alias sub="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias vs="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 
 # 设置代理
-alias sproxy="export ALL_PROXY=socks5://127.0.0.1:20170; echo -e '=> 开启代理 \c'; eval 'curl cip.cc'" 
+alias sproxy="export ALL_PROXY=socks5://127.0.0.1:2080; echo -e '=> 开启代理 \c'; eval 'curl cip.cc'" 
 # 取消代理
 alias uproxy="unset ALL_PROXY; echo -e '=> 关闭代理 \c'; eval 'curl cip.cc'"
 # 测试代理
@@ -70,18 +70,6 @@ des()
     cd $curFinderDir
 }
 
-
-# 进入qsm
-qsm() {
-  cd ~/workspace/g/Qsm
-}
-
-# 进入qsm
-wx() {
-  cd ~/workspace/g/Qsm-wx-service
-}
-
-
 # 进入hydee项目目录
 ah() { eval "cd ~/WebstormProjects/hydee-perject" }
 
@@ -101,8 +89,19 @@ doc() {
 
 # 打开单窗口
 it() {
+  local project_dir=${2:-$(pwd)}
+
+  if grep -q "^alias CD_HD_PROJECT_PATH=" ~/.zshrc; then
+    sed -i '' "s|^alias CD_HD_PROJECT_PATH=.*|alias CD_HD_PROJECT_PATH='cd $project_dir'|" ~/.zshrc
+  else
+    echo "alias CD_HD_PROJECT_PATH='cd $project_dir'" >> ~/.zshrc
+  fi
+
+  source ~/.zshrc
+
   itermocil --here $1
 }
+
 
 # 打开多窗口
 its() {
