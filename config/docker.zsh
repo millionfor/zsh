@@ -107,7 +107,7 @@ dc() {
     _dc_num="1"
   fi
 
-  if [ -n "$1" ] && [ -n "$2" ]; then
+  if [ -n "$1" ]; then
     docker-compose -f ${_dc_file} up -d --scale ${_dc_env}=${_dc_num}
   fi
 }
