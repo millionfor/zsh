@@ -91,18 +91,24 @@ alias focusfix='printf "\e[?1004l"'
 
 
 # docker-compose 启动
-dc(){
+dc() {
+  _dc_file=docker-compose.yml
   _dc_env=$1
   _dc_num=$2
+
   if [ -z "$1" ]; then
+    _dc_file=docker-compose.yml
     _dc_env=""
   else
-    _dc_env="$1"
+    _dc_file=docker-compose.$1.yml
   fi
+
   if [ -z "$2" ]; then
     _dc_num="1"
-  else
-    _dc_num="$1"
   fi
-  docker-compose -f docker-compose.${_dc_env}yml up -d --scale ${_dc_env}=${_dc_num}
+
+  if [ -n "$1" ] && [ -n "$2" ]; then
+    docker-compose -f ${_dc_file} up -d --scale ${_dc_env}=${_dc_num}
+  fi
 }
+
