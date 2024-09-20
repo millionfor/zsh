@@ -50,12 +50,16 @@ dp() {
 
 # 删除单个镜像
 drmi() {
-  docker rmi $1 -f
+  for container in "$@"; do
+    docker rmi "$container" -f
+  done
 }
 
 # 删除单个容器
 drm() {
-  docker rm $1 -f
+  for container in "$@"; do
+    docker rm "$container" -f
+  done
 }
 
 # 删除所有容器
