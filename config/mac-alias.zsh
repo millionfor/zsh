@@ -40,7 +40,7 @@ a.() {
 
 # 进入工作目录
 aw() {
-  cd ~/workspace
+  cd /Users/workspace/Workspaces
 }
 
 # 进入工作目录g目录
@@ -48,14 +48,9 @@ awg() {
   cd ~/workspace/gitlabs
 }
 
-# 进入工作目录g目录
-gg() {
-  cd ~/workspace/gg
-}
-
 # 进入测试目录
 at() {
-  cd ~/WebstormProjects/test
+  cd /Users/workspace/Workspaces/test
 }
 
 
@@ -76,14 +71,11 @@ des()
 }
 
 # 进入hydee项目目录
-ah() { eval "cd ~/WebstormProjects/hydee-perject" }
-
-# 进入npm目录
-an() { eval "cd ~/WebstormProjects/hydee-perject/npm" }
+ah() { eval "cd ~/Workspaces/hd" }
 
 # 进入hss目录
 ahss() { 
-  eval "cd ~/WebstormProjects/hydee-perject/npm/hss-modules" 
+  eval "cd ~/Workspaces/hd/hss-module" 
 }
 
 # 打开具体文档（vim|php|mysql|docker）
