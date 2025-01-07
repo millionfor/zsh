@@ -140,6 +140,14 @@ sd() {
 
 # 进入工作目录
 ws() {
-  cd ~/workspace
+  cd ~/
+}
+
+ww() {
+  cd ~/Workspaces
+}
+
+wss() {
+  cd ~/Workspaces/ws
 }
 
