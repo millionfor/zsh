@@ -28,6 +28,12 @@ alias sproxy_http="export http_proxy=http://127.0.0.1:2081;export https_proxy=ht
 # 取消http代理
 alias uproxy_http="unset http_proxy https_proxy; echo -e '=> 关闭代理 \c'; eval 'curl cip.cc'"
 
+alias np="~/.config/bash/git-release-npm.sh"
+
+nu() {
+  eval "npm unpublish $1 --force"
+}
+
 # 进入工作目录
 a() {
   eval "cd ~/WebstormProjects"
