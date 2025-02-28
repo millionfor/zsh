@@ -31,7 +31,7 @@ alias uproxy_http="unset http_proxy https_proxy; echo -e '=> 关闭代理 \c'; e
 alias np="~/.config/bash/git-release-npm.sh"
 
 nu() {
-  eval "npm unpublish $1 --force"
+  npm unpublish "$1" --force
 }
 
 # 进入工作目录
@@ -49,16 +49,15 @@ aw() {
   cd /Users/workspace/Workspaces
 }
 
-# 进入工作目录g目录
-awg() {
-  cd ~/workspace/gitlabs
+# 进入工作目录
+ws() {
+  cd ~/
 }
 
 # 进入测试目录
 at() {
   cd /Users/workspace/Workspaces/test
 }
-
 
 # 进入下载目录
 ad() {
@@ -69,11 +68,31 @@ ad() {
 ade() {
   cd ~/Desktop
 }
-des()
-{
-    curFinderDir=`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`
-    echo "\033[31m$curFinderDir\033[0m"
-    cd $curFinderDir
+
+# 进入npm
+wnpm() {
+  cd ~/Workspaces/npm
+}
+
+wqsm() {
+  cd ~/Workspaces/qsm
+}
+
+wbo() {
+  cd ~/Workspaces/boilerplates
+}
+
+wws() {
+  cd ~/Workspaces/ws
+}
+
+# 进入synology cloud
+wsd() {
+  cd /Users/workspace/SynologyDrive/SynologyDrive
+}
+
+ww() {
+  cd ~/Workspaces
 }
 
 # 进入hydee项目目录
@@ -82,6 +101,13 @@ ah() { eval "cd ~/Workspaces/hd" }
 # 进入hss目录
 ahss() { 
   eval "cd ~/Workspaces/hd/hss-module" 
+}
+
+des()
+{
+    curFinderDir=`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`
+    echo "\033[31m$curFinderDir\033[0m"
+    cd $curFinderDir
 }
 
 # 打开具体文档（vim|php|mysql|docker）
@@ -139,21 +165,5 @@ cldns () {
   sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
 }
 
-# 进入synology cloud
-sd() {
-  cd /Users/gongzijian/SynologyDrive
-}
 
-# 进入工作目录
-ws() {
-  cd ~/
-}
-
-ww() {
-  cd ~/Workspaces
-}
-
-wss() {
-  cd ~/Workspaces/ws
-}
 
