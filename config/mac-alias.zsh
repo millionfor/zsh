@@ -46,7 +46,7 @@ a.() {
 
 # 进入工作目录
 aw() {
-  cd /Users/workspace/Workspaces
+  cd /Users/millionfor/Workspace
 }
 
 # 进入工作目录
@@ -56,7 +56,7 @@ ws() {
 
 # 进入测试目录
 at() {
-  cd /Users/workspace/Workspaces/test
+  cd /Users/millionfor/Workspace/test
 }
 
 # 进入下载目录
@@ -71,36 +71,36 @@ ade() {
 
 # 进入npm
 wnpm() {
-  cd ~/Workspaces/npm
+  cd ~/Workspace/npm
 }
 
 wqsm() {
-  cd ~/Workspaces/qsm
+  cd ~/Workspace/qsm
 }
 
 wbo() {
-  cd ~/Workspaces/boilerplates
+  cd ~/Workspace/boilerplates
 }
 
 wws() {
-  cd ~/Workspaces/ws
+  cd ~/Workspace/ws
 }
 
 # 进入synology cloud
 wsd() {
-  cd /Users/workspace/SynologyDrive/SynologyDrive
+  cd /Users/millionfor/SynologyDrive/SynologyDrive
 }
 
 ww() {
-  cd ~/Workspaces
+  cd ~/Workspace
 }
 
 # 进入hydee项目目录
-ah() { eval "cd ~/Workspaces/hd" }
+ah() { eval "cd ~/Workspace/hd" }
 
 # 进入hss目录
 ahss() { 
-  eval "cd ~/Workspaces/hd/hss-module" 
+  eval "cd ~/Workspace/hd/hss-module" 
 }
 
 des()
@@ -165,5 +165,7 @@ cldns () {
   sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
 }
 
-
+pwd() {
+  command pwd | tee /dev/tty | pbcopy
+}
 
