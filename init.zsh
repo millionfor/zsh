@@ -11,6 +11,7 @@ source $ZSH/config/docker.zsh
 source $ZSH/config/mac-alias.zsh
 source $ZSH/config/ssh.zsh
 source $ZSH/config/debian12.zsh
+source $ZSH/config/abc.zsh
 
 source $ZSH/themes/*.zsh-theme
 
