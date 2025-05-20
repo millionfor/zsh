@@ -24,7 +24,7 @@ alias uproxy="unset ALL_PROXY; echo -e '=> 关闭代理 \c'; eval 'curl cip.cc'"
 alias tproxy="curl cip.cc"
 
 # 设置http代理
-alias sproxy_http="export http_proxy=http://127.0.0.1:2081;export https_proxy=http://127.0.0.1:2081; echo -e '=> 开启代理 \c'; eval 'curl cip.cc'" 
+alias sproxy_http="export http_proxy=http://127.0.0.1:1082;export https_proxy=http://127.0.0.1:1082; echo -e '=> 开启代理 \c'; eval 'curl cip.cc'" 
 # 取消http代理
 alias uproxy_http="unset http_proxy https_proxy; echo -e '=> 关闭代理 \c'; eval 'curl cip.cc'"
 

@@ -164,3 +164,15 @@ color() {
   done
   print -cP $colors
 }
+
+# git clone xxx && cd xxx
+gl() {
+    if [ -z "$1" ]; then
+        echo "Usage: dl <git-repo-url>"
+        return 1
+    fi
+
+    repo_url="$1"
+    repo_name=$(basename "$repo_url" .git)  # 提取仓库名（如 zsh）
+    git clone "$repo_url" && cd "$repo_name" || return 1
+}
