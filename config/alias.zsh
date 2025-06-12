@@ -52,6 +52,9 @@ alias ns='npm run start'
 alias nn='npm install && npm run start'
 alias nc="npm cache clean --force"
 alias npp="npm publish --access public"
+
+alias ff="fastfetch"
+
 # npm卸载包
 nu() {
   npm unpublish $1 --force
