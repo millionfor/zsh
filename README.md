@@ -45,7 +45,7 @@ sudo apt install fzf
 ```shell
 On macOS: brew install fd
 On Arch Linux: pacman -S fd
-On Ubuntu: apt install fd-find && ln -s $(which fdfind)
+On Ubuntu: apt install fd-find && ln -s $(which fdfind) sudo ln -s /usr/bin/fdfind /usr/bin/fd
 On Debian: sudo apt-get install fd-find && ln -s $(which fdfind) ~/.local/bin/fd
 ```
 
@@ -55,6 +55,11 @@ wget https://github.com/sharkdp/bat/releases/download/v0.12.1/bat_0.12.1_amd64.d
 
 sudo dpkg -i bat_0.12.1_amd64.deb
 
+sudo apt install bat
+
+batcat
+
+sudo ln -s /usr/bin/batcat /usr/bin/bat
 ```
 
 
