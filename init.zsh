@@ -12,6 +12,7 @@ source $ZSH/config/mac-alias.zsh
 source $ZSH/config/ssh.zsh
 source $ZSH/config/debian12.zsh
 source $ZSH/config/volta.zsh
+source $ZSH/config/h.zsh
 
 source $ZSH/themes/*.zsh-theme
 
