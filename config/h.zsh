@@ -47,19 +47,19 @@ _zsh_help() {
   <vv>            -选中当前
   <S-mm>          -翻译替换成中/英文
   <C-Right>       -向右跳一个单词
-  <C-Left>        -向左跳一个单词
-  <S-Up>          -向上选中
-  <S-Down>        -向下选中
-  <S-Left>        -向左选中
-  <S-Right>       -向右选中"
+  <C-Left>        -向左跳一个单词"
 }   
    
 # Neovim 快捷键帮助 
 _nvim_help() {
-  _gen_separator "$(_color yellow)" "🎗️" "Neovim"
-  echo "  y               -复制选中内容
-  <leader>g       -全选内容
-  ff              -在项目内搜索文本
+  _gen_separator "$(_color yellow)" "🎗️" "Neovim / C = Control, S = Shift"
+  echo "  👨‍🔧$(_color yellow) 普通模式（Normal Mode）$(_color reset)
+  <S-Up>          -向上选中
+  <S-Down>        -向下选中
+  <S-Left>        -向左选中
+  <S-Right>       -向右选中
+  <S-C-Up>        -向上每10行跳转
+  <S-C-Down>      -向下每10行跳转
   F1              -xxxx
   F2              -xxxx
   F3              -xxxx
@@ -69,7 +69,28 @@ _nvim_help() {
   F7              -xxxx
   F8              -xxxx
   F9              -xxxx
-  gd              -跳转到定义"
+  👨‍🌾$(_color yellow) 插入模式（Insert Mode）$(_color reset)
+  xx              -跳转到定义
+  👨‍🔧$(_color yellow) 可视模式（Visual Mode）$(_color reset)
+  y               -复制选中内容
+  ff              -在项目内搜索文本
+  <leader>g       -全选内容
+  gd              -跳转到定义
+  👨‍🔧$(_color yellow) 命令行模式（Command Mode）$(_color reset)
+  xx              -跳转到定义
+  👨‍🔧$(_color yellow) 搜索/导航操作$(_color reset)
+  xx              -跳转到定义
+  👨‍🔧$(_color yellow) 窗口/缓冲区/标签页操作$(_color reset)
+  xx              -跳转到定义
+  👨‍🔧$(_color yellow) 寄存器（Registers）操作$(_color reset)
+  xx              -跳转到定义
+  👨‍🔧$(_color yellow) 宏（Macros）$(_color reset)
+  xx              -跳转到定义
+  👨‍🔧$(_color yellow) 鼠标操作（可选）$(_color reset)
+  xx              -跳转到定义
+  👨‍🔧$(_color yellow) 插件/自定义操作$(_color reset)
+  xx              -跳转到定义
+  "
 }
 
 # Docker 快捷键帮助
