@@ -87,8 +87,8 @@ wws() {
 }
 
 # 进入synology cloud
-wsd() {
-  cd /Users/millionfor/SynologyDrive/SynologyDrive
+syn() {
+  cd /Users/millionfor/Library/CloudStorage/SynologyDrive-Quan
 }
 
 ww() {
