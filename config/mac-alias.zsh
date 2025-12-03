@@ -169,3 +169,7 @@ pwd() {
   command pwd | tee /dev/tty | pbcopy
 }
 
+ar() {
+  eval "cd ~/.local/share/fcitx5/rime"
+}
+

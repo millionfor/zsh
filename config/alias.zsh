@@ -49,6 +49,7 @@ alias yc="yarn cache clean"
 # npm ---------------------
 alias ni='npm install'
 alias ns='npm run start'
+alias nd='npm run dev'
 alias nn='npm install && npm run start'
 alias nc="npm cache clean --force"
 alias npp="npm publish --access public"
