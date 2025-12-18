@@ -36,7 +36,7 @@ nu() {
 
 # 进入工作目录
 a() {
-  eval "cd ~/WebstormProjects"
+  eval "cd ~/Workspace"
 }
 
 # 打开当前目录
