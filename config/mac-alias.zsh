@@ -173,3 +173,7 @@ ar() {
   eval "cd ~/.local/share/fcitx5/rime"
 }
 
+agt() {
+  eval "cd ~/Workspace/g/gist"
+}
+
