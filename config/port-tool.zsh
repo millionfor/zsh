@@ -30,11 +30,31 @@ port() {
     echo -e "${BLUE}▶ 端口列表${RESET}"
 
     if [[ "$OS" == "Darwin" ]]; then
+      # 打印表头
+      printf "%-8s %-8s %-20s %s\n" "PORT" "PID" "SERVICE" "PATH"
+      printf "%-8s %-8s %-20s %s\n" "--------" "--------" "--------------------" "----"
+
+      local lsof_out
       if [[ -n "$port" ]]; then
-        lsof -nP -iTCP:"$port" -sTCP:LISTEN
+        lsof_out=$(lsof -nP -iTCP:"$port" -sTCP:LISTEN 2>/dev/null)
       else
-        lsof -nP -iTCP -sTCP:LISTEN
+        lsof_out=$(lsof -nP -iTCP -sTCP:LISTEN 2>/dev/null)
       fi
+
+      # 跳过 lsof 的标题行，逐行解析
+      echo "$lsof_out" | tail -n +2 | while read -r line; do
+        local pid name addr
+        pid=$(echo "$line" | awk '{print $2}')
+        name=$(echo "$line" | awk '{print $1}')
+        addr=$(echo "$line" | awk '{print $9}' | sed 's/.*://')   # 提取端口号
+        local exe
+        exe=$(ps -p "$pid" -o comm= 2>/dev/null || echo "?")
+        # 尝试获取完整路径
+        local fullpath
+        fullpath=$(lsof -p "$pid" 2>/dev/null | awk '$4=="txt" && $5=="REG" {print $9; exit}')
+        [[ -z "$fullpath" ]] && fullpath="$exe"
+        printf "${GREEN}%-8s${RESET} %-8s ${YELLOW}%-20s${RESET} %s\n" "$addr" "$pid" "$name" "$fullpath"
+      done
     else
       if [[ -n "$port" ]]; then
         ss -ltnp | grep ":$port"
