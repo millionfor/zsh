@@ -177,3 +177,7 @@ agt() {
   eval "cd ~/Workspace/g/gist"
 }
 
+alias ds='du -sh * 2>/dev/null | sort -h'
+
+
+
