@@ -179,5 +179,35 @@ agt() {
 
 alias ds='du -sh * 2>/dev/null | sort -h'
 
+add-phrase() {
+  if [ $# -lt 2 ]; then
+    echo "Usage: add-phrase <code> <phrase...>"
+    return 1
+  fi
+  local code=$1
+  shift
+  local phrase=$*
+  printf "%s\t%s\n" "$phrase" "$code" >> ~/.local/share/fcitx5/rime/custom_phrase.txt
+  echo "Added: ${phrase} -> ${code}"
+  # 重启 Fcitx5 使配置立即生效
+  killall Fcitx5 && open -a "/Library/Input Methods/Fcitx5.app"
+  echo "Fcitx5 reloaded."
+}
 
-
+del-phrase() {
+  if [ -z "$1" ]; then
+    echo "Usage: del-phrase <code>"
+    return 1
+  fi
+  local code=$1
+  local target_file=~/.local/share/fcitx5/rime/custom_phrase.txt
+  
+  # 使用 awk 精确匹配第二列(编码)并排除，保留其他行
+  awk -F'\t' -v c="$code" '$2 != c' "$target_file" > "${target_file}.tmp" && mv "${target_file}.tmp" "$target_file"
+  
+  echo "Deleted all phrases for code: ${code}"
+  
+  # 重启 Fcitx5 使配置立即生效
+  killall Fcitx5 && open -a "/Library/Input Methods/Fcitx5.app"
+  echo "Fcitx5 reloaded."
+}
