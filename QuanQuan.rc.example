@@ -8,6 +8,15 @@
 # 安装后可在此配置你的私有 API Key、Token 以及个性化环境变量。
 # =======================================================
 
+# ----------------- 0. 命令行 Prompt 前缀自定义 (支持完全自定义) -----------------
+# 方式 1 (推荐)：完全自定义前缀（包含括号、Emoji、符号等任意格式）
+# export PROMPT_TAG="[⭕️ MacOS-M4]"      # 显示效果: [⭕️ MacOS-M4]
+# export PROMPT_TAG="(🍎 Mac M4)"        # 显示效果: (🍎 Mac M4)
+# export PROMPT_TAG="⭕️ MacOS-M4"        # 显示效果: ⭕️ MacOS-M4 (无方括号)
+
+# 方式 2：仅指定系统名称（不写括号时系统会自动补齐中括号 []）
+# export PROMPT_OS_NAME="MacOS-M4"       # 显示效果: [MacOS-M4]
+
 # ----------------- 1. AI API Keys -----------------
 # export OPENAI_API_KEY="sk-..."
 # export OPENAI_BASE_URL="https://api.openai.com/v1"
