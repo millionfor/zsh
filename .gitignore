@@ -1,5 +1,10 @@
+# IDE & Editor files
 .idea/
 .vscode/
+*.swp
+*.swo
+
+# Node & Build artifacts
 node_modules/
 dist/
 tmp/
@@ -8,8 +13,17 @@ logs/
 *.log
 **/dump.rdb
 **/.DS_Store
-cache/
-themes/
 
+# Cache files
+cache/*
+!cache/.gitkeep
+
+# Local user private configurations
+config/local.zsh
+*.local.zsh
+
+# Config backup files
+*.bak
+*.bak.*
 cfg
 cfg/*

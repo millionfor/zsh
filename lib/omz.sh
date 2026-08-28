@@ -1,10 +1,10 @@
-ZSH_CACHE_DIR="$OMZ/cache"
+ZSH_CACHE_DIR="${ZSH_CACHE_DIR:-${OMZ:-$HOME/.config/zsh}/cache}"
 SHORT_HOST=${HOST/.*/}
 autoload -Uz add-zsh-hook
 zmodload -i zsh/complist
 unsetopt correct
 autoload -U compaudit compinit
-autoload -U compinit && compinit
+compinit -d "$ZSH_CACHE_DIR/zcompdump-$ZSH_VERSION"
 setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus

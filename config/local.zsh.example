@@ -1,0 +1,21 @@
+#!/usr/bin/env zsh
+# =======================================================
+# 本地私有配置模板 (不会被 Git 追踪)
+# 复制此文件为 local.zsh 并填入你的个性化配置或 API Key：
+#   cp config/local.zsh.example config/local.zsh
+# =======================================================
+
+# ----------------- AI API Keys -----------------
+# export OPENAI_API_KEY="your-openai-api-key"
+# export OPENAI_API_BASE="https://api.openai.com/v1"
+
+# export DEEPSEEK_API_KEY="your-deepseek-api-key"
+# export ANTHROPIC_API_KEY="your-anthropic-api-key"
+# export GEMINI_API_KEY="your-gemini-api-key"
+
+# ----------------- Git Tokens -----------------
+# export GITHUB_TOKEN="your-github-token"
+# export GITLAB_TOKEN="your-gitlab-token"
+
+# ----------------- 自定义 PATH / 别名 -----------------
+# export PATH="$HOME/your/custom/bin:$PATH"

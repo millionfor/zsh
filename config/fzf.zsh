@@ -1,9 +1,39 @@
-alias fzf='fzf --preview "bat -p --color=always {} | head -100" --height 40%'
+#!/usr/bin/env zsh
+# =======================================================
+# FZF 与 FZF-Tab 智能补全与预览配置
+# =======================================================
 
-export FZF_DEFAULT_OPTS="--height 50% --layout=reverse --history=$OMZ/cache/fzfhistory"
-export FZF_DEFAULT_COMMAND="fd --hidden --exclude={.git,.idea,.vscode,.sass-cache,node_modules,dist,vendor} --type f"
-export FZF_PREVIEW_COMMAND='bash $OMZ/lib/file_preview.sh {}'
+# 动态探测 bat / batcat
+if command -v bat &>/dev/null; then
+  _BAT_PREVIEW="bat -p --color=always {}"
+elif command -v batcat &>/dev/null; then
+  _BAT_PREVIEW="batcat -p --color=always {}"
+else
+  _BAT_PREVIEW="cat {}"
+fi
 
+# 动态探测 fd / fdfind
+if command -v fd &>/dev/null; then
+  _FD_CMD="fd"
+elif command -v fdfind &>/dev/null; then
+  _FD_CMD="fdfind"
+else
+  _FD_CMD="find"
+fi
+
+alias fzf="fzf --preview \"$_BAT_PREVIEW | head -100\" --height 40%"
+
+export FZF_DEFAULT_OPTS="--height 50% --layout=reverse --history=${ZSH_CACHE_DIR:-$HOME/.config/zsh/cache}/fzfhistory"
+
+if [[ "$_FD_CMD" != "find" ]]; then
+  export FZF_DEFAULT_COMMAND="$_FD_CMD --hidden --exclude={.git,.idea,.vscode,.sass-cache,node_modules,dist,vendor,cache} --type f"
+else
+  export FZF_DEFAULT_COMMAND="find . -type f"
+fi
+
+export FZF_PREVIEW_COMMAND="bash ${ZSH:-$HOME/.config/zsh}/lib/file_preview.sh {}"
+
+# ----------------- fzf-tab 补全样式定制 -----------------
 zstyle ':completion:complete:*:options' sort false
 zstyle ':fzf-tab:complete:_zlua:*' query-string input
 zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
@@ -17,5 +47,5 @@ zstyle ':fzf-tab:complete:git-log:*' fzf-preview 'git log --color=always $word'
 zstyle ':fzf-tab:complete:git-show:*' fzf-preview 'git show --color=always $word'
 zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview '[ -f "$realpath" ] && git diff --color=always $word || git log --color=always $word'
 zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
-export LESSOPEN='| bash $OMZ/lib/file_preview.sh %s'
 
+export LESSOPEN="| bash ${ZSH:-$HOME/.config/zsh}/lib/file_preview.sh %s"
