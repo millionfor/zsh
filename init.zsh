@@ -9,6 +9,12 @@ export OMZ="$ZSH"
 export ZSH_CACHE_DIR="$ZSH/cache"
 [[ ! -d "$ZSH_CACHE_DIR" ]] && mkdir -p "$ZSH_CACHE_DIR"
 
+# 优先确保核心命令搜索路径 (fzf / brew / local bin) 可用
+[[ -d "$HOME/.fzf/bin" ]]    && export PATH="$HOME/.fzf/bin:$PATH"
+[[ -d "$HOME/.local/bin" ]]  && export PATH="$HOME/.local/bin:$PATH"
+[[ -d "/opt/homebrew/bin" ]] && export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+[[ -d "/usr/local/bin" ]]    && export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
 # 2. 加载通用基础配置
 [[ -f "$ZSH/config/exports.zsh" ]]   && source "$ZSH/config/exports.zsh"
 [[ -f "$ZSH/config/omz.zsh" ]]       && source "$ZSH/config/omz.zsh"
