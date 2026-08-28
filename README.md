@@ -28,18 +28,19 @@ cd ~/.config/zsh
 
 ---
 
-## 🔒 个人私有配置与密钥管理 (`~/.zshrc_config`)
+## 🔒 个人私有配置与密钥管理 (`QuanQuan.rc`)
 
-为了彻底杜绝个人 API Key、Token 及私有环境变量在 Git 提交中意外泄露，本框架采用**外部独立配置文件**方案：
+为了彻底杜绝个人 API Key、Token 及私有环境变量在 Git 提交中意外泄露：
 
-- 配置文件路径：`~/.zshrc_config`（位于您的用户家目录，**完全独立于 Git 仓库，永远不会被上传**）。
-- 每次启动 Zsh 时，`init.zsh` 都会自动检测并加载 `~/.zshrc_config`。
+- 安装时会自动在项目根目录下创建 **`~/.config/zsh/QuanQuan.rc`**。
+- 该文件已被严格写入 `.gitignore`，**永远不会被 Git 提交或上传**。
+- 每次启动 Zsh 时，`init.zsh` 都会自动检测并加载 `QuanQuan.rc`。
 
 ### 如何配置？
-安装完成后，直接编辑 `~/.zshrc_config`：
+安装完成后，直接编辑 `QuanQuan.rc`：
 
 ```bash
-vim ~/.zshrc_config
+vim ~/.config/zsh/QuanQuan.rc
 ```
 
 填入您的私有密钥和环境变量即可（修改后执行 `exec zsh` 生效）：
@@ -54,9 +55,9 @@ export ANTHROPIC_BASE_URL="https://api-slb.micuapi.ai"
 
 # Git Tokens
 export GITHUB_TOKEN="github_pat_..."
-export GITLAB_TOKEN="glpat_..."
+export GITLAB_TOKEN="glpat-..."
 
-# 本地环境变量
+# 本地个性化环境变量
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
 ```
 
@@ -70,7 +71,9 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
 .config/zsh/
 ├── install.sh                  # 跨平台一键安装脚本 (macOS / Debian 12)
 ├── init.zsh                    # 核心启动入口 (平台探测与自适应加载)
-├── .gitignore                  # Git 忽略规则 (保护缓存与私有配置)
+├── QuanQuan.rc.example         # 私密配置模板参考
+├── QuanQuan.rc                 # [本地生成] 个人私密配置 (已加入 .gitignore，永不上传)
+├── .gitignore                  # Git 忽略规则
 ├── README.md                   # 说明文档
 ├── config/
 │   ├── alias.zsh               # 通用快捷别名与函数 (跨平台)
@@ -85,7 +88,6 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
 │   ├── port-tool.zsh           # 跨平台端口查看与智能杀死工具
 │   ├── ssh.zsh                 # SSH 快捷连接别名
 │   ├── volta.zsh               # Volta Node.js 版本管理封装
-│   ├── local.zsh.example       # ~/.zshrc_config 模板参考
 │   │
 │   ├── macos/                  # 🍎 macOS 专属配置 (仅在 macOS 下加载)
 │   │   ├── alias.zsh           # macOS 应用快捷方式、代理切换、DNS刷新、剪贴板

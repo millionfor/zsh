@@ -104,7 +104,7 @@ install_deps_macos() {
   info "正在检查 macOS 依赖包..."
 
   if ! command -v brew &>/dev/null; then
-    warn "未检测到 Homebrew包管理器。"
+    warn "未检测到 Homebrew 包管理器。"
     if [[ "$NON_INTERACTIVE" == false ]]; then
       read -p "是否自动安装 Homebrew? (y/N): " choice
       case "$choice" in
@@ -230,10 +230,24 @@ deploy_config() {
   # 初始化缓存目录
   mkdir -p "${TARGET_DIR}/cache"
 
-  # 初始化个人个性化配置文件 ~/.zshrc_config
-  if [[ ! -f "${HOME}/.zshrc_config" && -f "${TARGET_DIR}/config/local.zsh.example" ]]; then
-    info "创建个人个性化私有配置文件: ~/.zshrc_config"
-    cp "${TARGET_DIR}/config/local.zsh.example" "${HOME}/.zshrc_config"
+  # 在项目根目录下自动创建 QuanQuan.rc 文件
+  if [[ ! -f "${TARGET_DIR}/QuanQuan.rc" ]]; then
+    if [[ -f "${TARGET_DIR}/QuanQuan.rc.example" ]]; then
+      info "在根目录下初始化私有配置文件: ${TARGET_DIR}/QuanQuan.rc"
+      cp "${TARGET_DIR}/QuanQuan.rc.example" "${TARGET_DIR}/QuanQuan.rc"
+    else
+      info "创建私有配置文件: ${TARGET_DIR}/QuanQuan.rc"
+      cat > "${TARGET_DIR}/QuanQuan.rc" << 'EOF'
+#!/usr/bin/env zsh
+# =======================================================
+# 个人私有配置 (QuanQuan.rc) - 已被 .gitignore 保护，永不上传
+# =======================================================
+
+# export OPENAI_API_KEY="sk-..."
+# export DEEPSEEK_API_KEY="sk-..."
+# export GITHUB_TOKEN="..."
+EOF
+    fi
   fi
 
   success "Zsh 配置目录部署完成"
@@ -326,7 +340,7 @@ main() {
   echo -e "${GREEN}${BOLD}================================================================${NC}"
   echo ""
   echo -e "  👉 立即生效配置:    ${CYAN}${BOLD}exec zsh${NC}"
-  echo -e "  👉 个人私密配置:    ${CYAN}${BOLD}~/.zshrc_config${NC} (存放你的 API Key 与个性化变量)"
+  echo -e "  👉 个人私密配置:    ${CYAN}${BOLD}${TARGET_DIR}/QuanQuan.rc${NC} (存放 API Key 与私有变量)"
   echo -e "  👉 快捷帮助查看:    ${CYAN}${BOLD}h${NC} 或 ${CYAN}${BOLD}h zsh${NC} / ${CYAN}${BOLD}h git${NC} / ${CYAN}${BOLD}h docker${NC}"
   echo -e "  👉 端口管理工具:    ${CYAN}${BOLD}port list${NC} 或 ${CYAN}${BOLD}port kill <port/pid>${NC}"
   if [[ "$OS" == "Darwin" ]]; then

@@ -18,9 +18,10 @@ logs/
 cache/*
 !cache/.gitkeep
 
-# Local user private configurations
-config/local.zsh
+# User private configuration (QuanQuan.rc)
+QuanQuan.rc
 *.local.zsh
+config/local.zsh
 
 # Config backup files
 *.bak

@@ -54,10 +54,10 @@ elif [[ -d "$ZSH/themes" ]]; then
   done
 fi
 
-# 5. 加载个人个性化私密配置 (~/.zshrc_config)
-# 位于用户家目录，完全独立于 Git 仓库，用于存放私密 API Key、Token 与个性化环境变量
-[[ -f "$HOME/.zshrc_config" ]]   && source "$HOME/.zshrc_config"
+# 5. 加载个人私有配置 (QuanQuan.rc)
+# 位于项目根目录 $ZSH/QuanQuan.rc，已加入 .gitignore，用于存放私密 API Key、Token 与个性化环境变量
+[[ -f "$ZSH/QuanQuan.rc" ]]      && source "$ZSH/QuanQuan.rc"
 [[ -f "$ZSH/config/local.zsh" ]] && source "$ZSH/config/local.zsh"
-[[ -f "$HOME/.zshrc.local" ]]    && source "$HOME/.zshrc.local"
+[[ -f "$HOME/.zshrc_config" ]]   && source "$HOME/.zshrc_config"
 
 return 0 2>/dev/null || true
