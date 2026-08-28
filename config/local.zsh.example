@@ -1,21 +1,29 @@
 #!/usr/bin/env zsh
 # =======================================================
-# 本地私有配置模板 (不会被 Git 追踪)
-# 复制此文件为 local.zsh 并填入你的个性化配置或 API Key：
-#   cp config/local.zsh.example config/local.zsh
+# 个人私有配置模板 (~/.zshrc_config)
+# 
+# 位于用户根目录 ~/.zshrc_config，完全独立于 Git 仓库，永不被上传。
+# 安装后可在此配置你的私有 API Key、Token 以及个性化环境变量。
 # =======================================================
 
-# ----------------- AI API Keys -----------------
-# export OPENAI_API_KEY="your-openai-api-key"
-# export OPENAI_API_BASE="https://api.openai.com/v1"
+# ----------------- 1. AI API Keys -----------------
+# export OPENAI_API_KEY="sk-..."
+# export OPENAI_BASE_URL="https://api.openai.com/v1"
 
-# export DEEPSEEK_API_KEY="your-deepseek-api-key"
-# export ANTHROPIC_API_KEY="your-anthropic-api-key"
-# export GEMINI_API_KEY="your-gemini-api-key"
+# export DEEPSEEK_API_KEY="sk-..."
+# export ANTHROPIC_API_KEY="sk-..."
+# export ANTHROPIC_BASE_URL="https://api-slb.micuapi.ai"
+# export GEMINI_API_KEY="AIzaSy..."
+# export CODESTRAL_API_KEY="..."
+# export OPENROUTER_API_KEY="sk-or-v1-..."
+# export DASHSCOPE_API_KEY="sk-..."
 
-# ----------------- Git Tokens -----------------
-# export GITHUB_TOKEN="your-github-token"
-# export GITLAB_TOKEN="your-gitlab-token"
+# ----------------- 2. 代码托管 Token -----------------
+# export GITHUB_TOKEN="github_pat_..."
+# export GITLAB_TOKEN="glpat-..."
+# export GITLAB_BASE_URL="https://git.yourcompany.com"
 
-# ----------------- 自定义 PATH / 别名 -----------------
-# export PATH="$HOME/your/custom/bin:$PATH"
+# ----------------- 3. 本地个性化 PATH / 环境变量 -----------------
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
+# export PNPM_HOME="$HOME/Library/pnpm"
+# export PATH="$HOME/go/bin:$PATH"

@@ -230,10 +230,10 @@ deploy_config() {
   # 初始化缓存目录
   mkdir -p "${TARGET_DIR}/cache"
 
-  # 初始化本地私有配置文件
-  if [[ ! -f "${TARGET_DIR}/config/local.zsh" && -f "${TARGET_DIR}/config/local.zsh.example" ]]; then
-    info "创建本地个性化私有配置: ${TARGET_DIR}/config/local.zsh"
-    cp "${TARGET_DIR}/config/local.zsh.example" "${TARGET_DIR}/config/local.zsh"
+  # 初始化个人个性化配置文件 ~/.zshrc_config
+  if [[ ! -f "${HOME}/.zshrc_config" && -f "${TARGET_DIR}/config/local.zsh.example" ]]; then
+    info "创建个人个性化私有配置文件: ~/.zshrc_config"
+    cp "${TARGET_DIR}/config/local.zsh.example" "${HOME}/.zshrc_config"
   fi
 
   success "Zsh 配置目录部署完成"
@@ -325,14 +325,14 @@ main() {
   echo -e "${GREEN}${BOLD}             🎉 Zsh 配置环境一键安装完成!                       ${NC}"
   echo -e "${GREEN}${BOLD}================================================================${NC}"
   echo ""
-  echo -e "  👉 立即生效配置:  ${CYAN}${BOLD}exec zsh${NC}"
-  echo -e "  👉 快捷帮助查看:  ${CYAN}${BOLD}h${NC} 或 ${CYAN}${BOLD}h zsh${NC} / ${CYAN}${BOLD}h git${NC} / ${CYAN}${BOLD}h docker${NC}"
-  echo -e "  👉 端口管理工具:  ${CYAN}${BOLD}port list${NC} 或 ${CYAN}${BOLD}port kill <port/pid>${NC}"
-  echo -e "  👉 本地私有配置:  ${CYAN}${BOLD}${TARGET_DIR}/config/local.zsh${NC}"
+  echo -e "  👉 立即生效配置:    ${CYAN}${BOLD}exec zsh${NC}"
+  echo -e "  👉 个人私密配置:    ${CYAN}${BOLD}~/.zshrc_config${NC} (存放你的 API Key 与个性化变量)"
+  echo -e "  👉 快捷帮助查看:    ${CYAN}${BOLD}h${NC} 或 ${CYAN}${BOLD}h zsh${NC} / ${CYAN}${BOLD}h git${NC} / ${CYAN}${BOLD}h docker${NC}"
+  echo -e "  👉 端口管理工具:    ${CYAN}${BOLD}port list${NC} 或 ${CYAN}${BOLD}port kill <port/pid>${NC}"
   if [[ "$OS" == "Darwin" ]]; then
-    echo -e "  👉 macOS 专属模块: ${CYAN}${BOLD}${TARGET_DIR}/config/macos/${NC}"
+    echo -e "  👉 macOS 专属模块:   ${CYAN}${BOLD}${TARGET_DIR}/config/macos/${NC}"
   else
-    echo -e "  👉 Linux 专属模块: ${CYAN}${BOLD}${TARGET_DIR}/config/linux/${NC}"
+    echo -e "  👉 Linux 专属模块:   ${CYAN}${BOLD}${TARGET_DIR}/config/linux/${NC}"
   fi
   echo ""
 }

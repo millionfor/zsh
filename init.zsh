@@ -54,7 +54,9 @@ elif [[ -d "$ZSH/themes" ]]; then
   done
 fi
 
-# 5. 加载本地私有配置 (不会被 Git 追踪，用于存放私密 API Key 与自定义变量)
+# 5. 加载个人个性化私密配置 (~/.zshrc_config)
+# 位于用户家目录，完全独立于 Git 仓库，用于存放私密 API Key、Token 与个性化环境变量
+[[ -f "$HOME/.zshrc_config" ]]   && source "$HOME/.zshrc_config"
 [[ -f "$ZSH/config/local.zsh" ]] && source "$ZSH/config/local.zsh"
 [[ -f "$HOME/.zshrc.local" ]]    && source "$HOME/.zshrc.local"
 

@@ -28,6 +28,40 @@ cd ~/.config/zsh
 
 ---
 
+## 🔒 个人私有配置与密钥管理 (`~/.zshrc_config`)
+
+为了彻底杜绝个人 API Key、Token 及私有环境变量在 Git 提交中意外泄露，本框架采用**外部独立配置文件**方案：
+
+- 配置文件路径：`~/.zshrc_config`（位于您的用户家目录，**完全独立于 Git 仓库，永远不会被上传**）。
+- 每次启动 Zsh 时，`init.zsh` 都会自动检测并加载 `~/.zshrc_config`。
+
+### 如何配置？
+安装完成后，直接编辑 `~/.zshrc_config`：
+
+```bash
+vim ~/.zshrc_config
+```
+
+填入您的私有密钥和环境变量即可（修改后执行 `exec zsh` 生效）：
+
+```bash
+# AI API Keys
+export OPENAI_API_KEY="sk-..."
+export OPENAI_BASE_URL="https://api.openai.com/v1"
+export DEEPSEEK_API_KEY="sk-..."
+export ANTHROPIC_API_KEY="sk-..."
+export ANTHROPIC_BASE_URL="https://api-slb.micuapi.ai"
+
+# Git Tokens
+export GITHUB_TOKEN="github_pat_..."
+export GITLAB_TOKEN="glpat_..."
+
+# 本地环境变量
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
+```
+
+---
+
 ## 📂 模块化目录架构
 
 针对 macOS 和 Linux 进行了明确的独立分离，确保配置干净高效，互不干扰：
@@ -51,7 +85,7 @@ cd ~/.config/zsh
 │   ├── port-tool.zsh           # 跨平台端口查看与智能杀死工具
 │   ├── ssh.zsh                 # SSH 快捷连接别名
 │   ├── volta.zsh               # Volta Node.js 版本管理封装
-│   ├── local.zsh.example       # 本地私密配置模板 (API Key / Token)
+│   ├── local.zsh.example       # ~/.zshrc_config 模板参考
 │   │
 │   ├── macos/                  # 🍎 macOS 专属配置 (仅在 macOS 下加载)
 │   │   ├── alias.zsh           # macOS 应用快捷方式、代理切换、DNS刷新、剪贴板
@@ -113,19 +147,6 @@ port kill 3000  # 智能杀死占用 3000 端口的进程或指定 PID
 4. **zsh-autosuggestions**：自动给出灰色历史建议，按 `→` 键即可应用。
 5. **zsh-syntax-highlighting**：正确的命令绿色高亮，错误命令红色标记。
 6. **fzf-ssh**：输入 `ssh` 或 `scp` 时，自动解析 `~/.ssh/config` 并提供交互式菜单选择。
-
----
-
-## 🔒 私有配置与 API Key 管理
-
-为了防止个人 API Key（如 OpenAI, DeepSeek, Claude, GitHub Token）在 Git 提交中泄露：
-
-1. 复制模板文件：
-   ```bash
-   cp ~/.config/zsh/config/local.zsh.example ~/.config/zsh/config/local.zsh
-   ```
-2. 编辑 `~/.config/zsh/config/local.zsh` 填入您的私有环境变量或密钥。
-3. 该文件已被写入 `.gitignore`，绝对不会被提交或上传。
 
 ---
 
