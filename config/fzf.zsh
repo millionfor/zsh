@@ -1,18 +1,18 @@
 #!/usr/bin/env zsh
 # =======================================================
-# FZF 与 FZF-Tab 智能补全与预览配置
+# FZF 与 FZF-Tab 下拉列表与智能补全配置
 # =======================================================
 
-# 动态探测 bat / batcat
+# 动态探测 bat / batcat 预览工具
 if command -v bat &>/dev/null; then
-  _BAT_PREVIEW="bat -p --color=always {}"
+  _BAT_CMD="bat -p --color=always {}"
 elif command -v batcat &>/dev/null; then
-  _BAT_PREVIEW="batcat -p --color=always {}"
+  _BAT_CMD="batcat -p --color=always {}"
 else
-  _BAT_PREVIEW="cat {}"
+  _BAT_CMD="cat {}"
 fi
 
-# 动态探测 fd / fdfind
+# 动态探测 fd / fdfind 搜索工具
 if command -v fd &>/dev/null; then
   _FD_CMD="fd"
 elif command -v fdfind &>/dev/null; then
@@ -21,9 +21,10 @@ else
   _FD_CMD="find"
 fi
 
-alias fzf="fzf --preview \"$_BAT_PREVIEW | head -100\" --height 40%"
+alias fzf="fzf --preview \"$_BAT_CMD | head -100\" --height 40%"
 
-export FZF_DEFAULT_OPTS="--height 50% --layout=reverse --history=${ZSH_CACHE_DIR:-$HOME/.config/zsh/cache}/fzfhistory"
+# 下拉列表核心参数：--layout=reverse 使列表向下展开形成下拉菜单形式
+export FZF_DEFAULT_OPTS="--height 50% --layout=reverse --history=${ZSH_CACHE_DIR:-$OMZ/cache}/fzfhistory"
 
 if [[ "$_FD_CMD" != "find" ]]; then
   export FZF_DEFAULT_COMMAND="$_FD_CMD --hidden --exclude={.git,.idea,.vscode,.sass-cache,node_modules,dist,vendor,cache} --type f"
@@ -33,7 +34,7 @@ fi
 
 export FZF_PREVIEW_COMMAND="bash ${ZSH:-$HOME/.config/zsh}/lib/file_preview.sh {}"
 
-# ----------------- fzf-tab 补全样式定制 -----------------
+# ----------------- fzf-tab 补全样式定制 (下拉菜单形式) -----------------
 zstyle ':completion:complete:*:options' sort false
 zstyle ':fzf-tab:complete:_zlua:*' query-string input
 zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
@@ -46,6 +47,8 @@ zstyle ':fzf-tab:complete:git-(add|diff|restore):*' fzf-preview 'git diff --colo
 zstyle ':fzf-tab:complete:git-log:*' fzf-preview 'git log --color=always $word'
 zstyle ':fzf-tab:complete:git-show:*' fzf-preview 'git show --color=always $word'
 zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview '[ -f "$realpath" ] && git diff --color=always $word || git log --color=always $word'
-zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
+
+# 通用文件与目录预览 (调用优化后的 file_preview.sh，兼容 macOS 与 Linux)
+zstyle ':fzf-tab:complete:*:*' fzf-preview 'bash ${ZSH:-$HOME/.config/zsh}/lib/file_preview.sh ${(Q)realpath}'
 
 export LESSOPEN="| bash ${ZSH:-$HOME/.config/zsh}/lib/file_preview.sh %s"

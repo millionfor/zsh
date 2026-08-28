@@ -6,19 +6,21 @@
 target="$1"
 [[ ! -e "$target" ]] && echo "Not found: $target" && exit 0
 
+# ----------------- 目录预览 -----------------
 if [ -d "$target" ]; then
   if command -v eza &>/dev/null; then
-    eza -l --no-user --no-time --icons "$target" 2>/dev/null
+    eza -1 --icons --color=always "$target" 2>/dev/null
   elif command -v exa &>/dev/null; then
-    exa -l --no-user --no-time --icons "$target" 2>/dev/null
-  elif ls --color=tty "$target" &>/dev/null; then
-    ls -lah --color=tty "$target" 2>/dev/null
+    exa -1 --icons --color=always "$target" 2>/dev/null
+  elif [[ "$(uname)" == "Darwin" ]]; then
+    ls -1 -G "$target" 2>/dev/null
   else
-    ls -lah -G "$target" 2>/dev/null
+    ls -1 --color=always "$target" 2>/dev/null
   fi
   exit 0
 fi
 
+# ----------------- 文件预览 -----------------
 mime=$(file -bL --mime-type "$target" 2>/dev/null || echo "text/plain")
 category=${mime%%/*}
 
