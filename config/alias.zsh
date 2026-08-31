@@ -58,12 +58,12 @@ fi
 
 # 进入 nvim 配置目录
 gv() {
-  cd ~/.config/nvim 2>/dev/null && ${EDITOR:-vim}
+  cd ~/.config/nvim 2>/dev/null && ${EDITOR:-nvim}
 }
 
 # 进入 zsh 配置目录
 gz() {
-  cd "${ZSH:-~/.config/zsh}" && ${EDITOR:-vim}
+  cd "${ZSH:-~/.config/zsh}" && ${EDITOR:-nvim}
 }
 
 # ----------------- Git -----------------
