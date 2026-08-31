@@ -5,14 +5,74 @@
 
 # ----------------- 应用快捷打开 -----------------
 # Sublime Text
-if [[ -f "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ]]; then
-  alias sub="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-fi
+sublime() {
+  local app_bin="/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
+  if [[ -f "$app_bin" ]]; then
+    "$app_bin" "${@:-.}"
+  elif [[ -d "/Applications/Sublime Text.app" ]]; then
+    open -a "Sublime Text" "${@:-.}"
+  else
+    echo "Sublime Text 未安装在 /Applications 目录" >&2
+    return 1
+  fi
+}
+alias sub="sublime"
+alias subl="sublime"
 
 # Visual Studio Code
-if [[ -f "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" ]]; then
-  alias vs="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
-fi
+vscode() {
+  local app_bin="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
+  if [[ -f "$app_bin" ]]; then
+    "$app_bin" "${@:-.}"
+  elif [[ -d "/Applications/Visual Studio Code.app" ]]; then
+    open -a "Visual Studio Code" "${@:-.}"
+  else
+    echo "Visual Studio Code 未安装在 /Applications 目录" >&2
+    return 1
+  fi
+}
+alias vs="vscode"
+alias code="vscode"
+
+# Antigravity IDE
+antigravity-ide() {
+  local app_bin="/Applications/Antigravity IDE.app/Contents/Resources/app/bin/antigravity-ide"
+  if [[ -f "$app_bin" ]]; then
+    "$app_bin" "${@:-.}"
+  elif [[ -d "/Applications/Antigravity IDE.app" ]]; then
+    open -a "Antigravity IDE" "${@:-.}"
+  elif [[ -d "/Applications/Antigravity.app" ]]; then
+    open -a "Antigravity" "${@:-.}"
+  else
+    echo "Antigravity IDE 未安装在 /Applications 目录" >&2
+    return 1
+  fi
+}
+alias agy="antigravity-ide"
+alias ai="antigravity-ide"
+alias agide="antigravity-ide"
+alias antigravity="antigravity-ide"
+
+# 快捷打开指令 (支持 op / op . / op vscode [dir] / op sublime [dir] / op antigravity-ide [dir] / op <file>)
+op() {
+  case "$1" in
+    vscode|vs|code)
+      shift
+      vscode "$@"
+      ;;
+    sublime|subl|sub)
+      shift
+      sublime "$@"
+      ;;
+    antigravity-ide|antigravity|agy|ai|agide)
+      shift
+      antigravity-ide "$@"
+      ;;
+    *)
+      open "${@:-.}"
+      ;;
+  esac
+}
 
 # ----------------- 剪贴板增强 -----------------
 # 获取当前路径并复制到剪贴板
